@@ -503,13 +503,7 @@ h3 {
   transition: background .18s, border-color .18s, color .18s, box-shadow .18s;
 }
 
-.solution-card:hover,
-.solution-card:focus-visible {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(13, 27, 140, .18);
-}
+
 
 .solution-card:focus-visible {
   outline: 3px solid var(--orange-deep);
@@ -537,12 +531,6 @@ h3 {
 .solution-card__icon svg circle,
 .solution-card__icon svg rect {
   stroke: currentColor;
-}
-
-.solution-card:hover .solution-card__icon,
-.solution-card:focus-visible .solution-card__icon {
-  background: #fff;
-  color: var(--blue);
 }
 
 .solution-card h3 {
@@ -586,19 +574,6 @@ h3 {
   transition: background .18s;
 }
 
-.solution-card:hover h3,
-.solution-card:hover .solution-card__tagline,
-.solution-card:hover li,
-.solution-card:focus-visible h3,
-.solution-card:focus-visible .solution-card__tagline,
-.solution-card:focus-visible li {
-  color: #fff;
-}
-
-.solution-card:hover li::before,
-.solution-card:focus-visible li::before {
-  background: var(--orange);
-}
 
 /* ════════════════════════════════════ 05 TÉMOIGNAGES ════════ */
 .testimonials {
