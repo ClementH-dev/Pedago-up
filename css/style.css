@@ -744,7 +744,7 @@ figcaption span {
 }
 
 .dot.active::before {
-  background: var(--blue);
+  background: var(--orange);
 }
 
 .testimonial-toggle {
