@@ -1253,6 +1253,14 @@ figcaption span {
   }
 
   .hero__visual {
+    order: -1;
+  }
+
+  .hero__content {
+    order: 1;
+  }
+
+  .hero__visual {
     display: flex;
   }
 
