@@ -522,6 +522,20 @@ h3 {
   transition: background .18s;
 }
 
+.solution-card__icon--image {
+  width: 100%;
+  height: 148px;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.solution-card__icon--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .solution-card__icon svg {
   width: 30px;
   height: 30px;
