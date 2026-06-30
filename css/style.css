@@ -644,7 +644,6 @@ blockquote {
   font-size: 3rem;
   line-height: 0;
   color: var(--orange);
-  opacity: .2;
   display: inline;
   vertical-align: -0.3em;
   margin-left: 4px;
@@ -704,15 +703,6 @@ figcaption {
   justify-content: center;
   gap: 12px;
   margin-top: 20px;
-}
-
-.testimonial__avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--orange-light);
-  border: 2px solid var(--orange);
-  flex-shrink: 0;
 }
 
 figcaption cite {
