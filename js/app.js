@@ -178,10 +178,28 @@ let current = 0;
 let autoTimer;
 let isManualPaused = false;
 let isInteractionPaused = false;
+let sliderResizeTimeout;
+let sliderTransitionTimeout;
 
 function stopAuto() {
   clearInterval(autoTimer);
   autoTimer = undefined;
+}
+
+function setSliderHeight() {
+  if (!slider || !slides.length) return;
+
+  const heights = Array.from(slides, slide => slide.getBoundingClientRect().height);
+  const maxHeight = Math.max(...heights);
+
+  if (maxHeight > 0) {
+    slider.style.height = `${Math.ceil(maxHeight + 20)}px`;
+  }
+}
+
+function scheduleSliderHeightUpdate() {
+  window.clearTimeout(sliderResizeTimeout);
+  sliderResizeTimeout = window.setTimeout(setSliderHeight, 100);
 }
 
 function updatePauseButton() {
@@ -203,18 +221,30 @@ function updatePauseButton() {
 function goTo(index, { announce = false } = {}) {
   if (!slides.length) return;
 
+  window.clearTimeout(sliderTransitionTimeout);
   slider?.setAttribute('aria-live', announce ? 'polite' : 'off');
+  slides.forEach(slide => slide.classList.remove('is-exiting'));
   slides[current].classList.remove('active');
+  slides[current].classList.add('is-exiting');
   slides[current].setAttribute('aria-hidden', 'true');
   dots[current].classList.remove('active');
   dots[current].setAttribute('aria-pressed', 'false');
 
   current = (index + slides.length) % slides.length;
 
+  slides[current].classList.remove('is-exiting');
   slides[current].classList.add('active');
   slides[current].removeAttribute('aria-hidden');
   dots[current].classList.add('active');
   dots[current].setAttribute('aria-pressed', 'true');
+
+  sliderTransitionTimeout = window.setTimeout(() => {
+    slides.forEach(slide => {
+      if (!slide.classList.contains('active')) {
+        slide.classList.remove('is-exiting');
+      }
+    });
+  }, 500);
 }
 
 function startAuto() {
@@ -280,8 +310,12 @@ if (slides.length) {
     }
   });
   updatePauseButton();
+  setSliderHeight();
   startAuto();
 }
+
+window.addEventListener('load', setSliderHeight);
+window.addEventListener('resize', scheduleSliderHeightUpdate);
 
 // ── FAQ accordion ──────────────────────────────────────────
 document.querySelectorAll('.faq__item').forEach(item => {

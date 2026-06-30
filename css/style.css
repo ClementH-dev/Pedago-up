@@ -608,15 +608,40 @@ h3 {
 
 .testimonial-slider {
   position: relative;
-  min-height: 180px;
+  overflow: hidden;
 }
 
 .testimonial-slide {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%) translateY(-50%);
+  pointer-events: none;
+  transition: opacity .45s ease, transform .45s ease;
 }
 
 .testimonial-slide.active {
-  display: block;
+  opacity: 1;
+  transform: translateX(0) translateY(-50%);
+  pointer-events: auto;
+}
+
+.testimonial-slide.is-exiting {
+  opacity: 0;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-slide {
+    transition: none;
+  }
 }
 
 blockquote {
