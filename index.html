@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,14 +18,15 @@
   <header class="navbar" id="top">
     <div class="navbar__inner container">
       <a href="#top" class="navbar__logo" aria-label="Pédago'Up — Retour en haut de page">
-        <img src="assets/logo_trim.png" alt="Pédago'Up" class="logo-img">
+        <img src="assets/logo_trim.avif" alt="Pédago'Up" class="logo-img" width="420" height="305">
       </a>
       <nav class="navbar__nav" id="nav-menu" aria-label="Navigation principale">
         <ul>
           <li><a href="#presentation">À propos</a></li>
           <li><a href="#solutions">Nos services</a></li>
+          <li><a href="#testimonials">Témoignages</a></li>
           <li><a href="#roadmap">Démarche</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#faq">Foire aux questions</a></li>
         </ul>
       </nav>
       <a href="#contact" class="btn btn--dark navbar__cta">Prendre RDV</a>
@@ -38,7 +39,7 @@
   </header>
 
   <!-- ═══════════════════════════════════ CONTENU PRINCIPAL ══ -->
-  <main id="contenu-principal">
+  <main id="contenu-principal" tabindex="-1">
 
     <!-- ════════════════════════════════════ 02 — HERO ════════ -->
     <section class="hero" aria-labelledby="hero-title">
@@ -56,20 +57,13 @@
             <a href="#solutions" class="btn btn--outline">Découvrir nos services</a>
           </div>
         </div>
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__blob">
-            <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="210" cy="190" rx="200" ry="175" fill="#FFF5EE"/>
-              <circle cx="210" cy="130" r="40" fill="#C75900" opacity=".15"/>
-              <circle cx="210" cy="120" r="28" fill="#C75900" opacity=".25"/>
-              <rect x="170" y="155" width="80" height="100" rx="12" fill="#C75900" opacity=".2"/>
-              <rect x="130" y="200" width="60" height="8" rx="4" fill="#000099" opacity=".3"/>
-              <rect x="130" y="215" width="48" height="8" rx="4" fill="#000099" opacity=".2"/>
-              <rect x="240" y="200" width="55" height="8" rx="4" fill="#000099" opacity=".3"/>
-              <rect x="240" y="215" width="42" height="8" rx="4" fill="#000099" opacity=".2"/>
-              <circle cx="155" cy="145" r="18" fill="#000099" opacity=".1"/>
-              <circle cx="265" cy="150" r="15" fill="#000099" opacity=".1"/>
-            </svg>
+        <div class="hero__visual">
+          <div class="hero-portrait">
+            <img
+              src="assets/1763549697758.avif"
+              alt=""
+              width="400"
+              height="400">
           </div>
         </div>
       </div>
@@ -81,13 +75,10 @@
         <div class="presentation__photo">
           <div class="photo-frame">
             <img
-              src="assets/carla.jpg"
-              alt="Portrait de Carla Delépée, ingénieure pédagogique et fondatrice de Pédago'Up"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="photo-placeholder" style="display:none" aria-hidden="true">
-              <svg viewBox="0 0 120 120" fill="none" aria-hidden="true"><circle cx="60" cy="45" r="28" fill="#C75900" opacity=".2"/><ellipse cx="60" cy="100" rx="40" ry="25" fill="#C75900" opacity=".15"/></svg>
-              <span>Carla Delépée</span>
-            </div>
+              src="assets/1763549697758.avif"
+              alt="Portrait illustré de Carla Delépée, ingénieure pédagogique et fondatrice de Pédago'Up"
+              width="400"
+              height="400">
           </div>
         </div>
         <div class="presentation__text">
@@ -108,11 +99,11 @@
         <p class="section-sub">Un accompagnement sur-mesure pour chaque enjeu pédagogique</p>
         <ul class="solutions__grid">
 
-          <li class="solution-card">
-            <div class="solution-card__icon" style="background:#FFF5EE">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 40V16l16-8 16 8v24" stroke="#F57C1F" stroke-width="2.5" stroke-linejoin="round"/><rect x="18" y="28" width="12" height="12" stroke="#F57C1F" stroke-width="2"/><path d="M16 20h4M28 20h4M16 26h4M28 26h4" stroke="#F57C1F" stroke-width="2" stroke-linecap="round"/></svg>
+          <li class="solution-card" tabindex="0" aria-labelledby="service-formations-title">
+            <div class="solution-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 40V16l16-8 16 8v24" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><rect x="18" y="28" width="12" height="12" stroke="currentColor" stroke-width="2"/><path d="M16 20h4M28 20h4M16 26h4M28 26h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>Formations engageantes</h3>
+            <h3 id="service-formations-title">Formations engageantes</h3>
             <p class="solution-card__tagline">Redonnez à vos apprenants le plaisir de se former&nbsp;!</p>
             <ul>
               <li>Scénarios pédagogiques</li>
@@ -121,11 +112,11 @@
             </ul>
           </li>
 
-          <li class="solution-card solution-card--featured">
-            <div class="solution-card__icon" style="background:rgba(255,255,255,.2)">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="16" stroke="#fff" stroke-width="2.5"/><path d="M16 24l6 6 10-12" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <li class="solution-card" tabindex="0" aria-labelledby="service-competences-title">
+            <div class="solution-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/><path d="M16 24l6 6 10-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3>Approche par compétences</h3>
+            <h3 id="service-competences-title">Approche par compétences</h3>
             <p class="solution-card__tagline">Alignez vos formations sur les attentes métiers&nbsp;!</p>
             <ul>
               <li>Approche par compétences</li>
@@ -134,11 +125,11 @@
             </ul>
           </li>
 
-          <li class="solution-card">
-            <div class="solution-card__icon" style="background:#EEF0FF">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16" stroke="#0D1B8C" stroke-width="2.5" stroke-linecap="round"/><path d="M32 8v8h8" stroke="#0D1B8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 24h12M18 30h8" stroke="#0D1B8C" stroke-width="2" stroke-linecap="round"/></svg>
+          <li class="solution-card" tabindex="0" aria-labelledby="service-accessibilite-title">
+            <div class="solution-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M32 8v8h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 24h12M18 30h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>Accessibilité</h3>
+            <h3 id="service-accessibilite-title">Accessibilité</h3>
             <p class="solution-card__tagline">Garantissez l'inclusion de tous vos apprenants&nbsp;!</p>
             <ul>
               <li>Accessibilité numérique</li>
@@ -146,11 +137,11 @@
             </ul>
           </li>
 
-          <li class="solution-card">
-            <div class="solution-card__icon" style="background:#FFF5EE">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 10l3.6 7.3 8.1 1.2-5.9 5.7 1.4 8-7.2-3.8-7.2 3.8 1.4-8-5.9-5.7 8.1-1.2z" stroke="#F57C1F" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 36l-4 6M34 36l4 6" stroke="#F57C1F" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <li class="solution-card" tabindex="0" aria-labelledby="service-valorisation-title">
+            <div class="solution-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 10l3.6 7.3 8.1 1.2-5.9 5.7 1.4 8-7.2-3.8-7.2 3.8 1.4-8-5.9-5.7 8.1-1.2z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 36l-4 6M34 36l4 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </div>
-            <h3>Valorisation des compétences</h3>
+            <h3 id="service-valorisation-title">Valorisation des compétences</h3>
             <p class="solution-card__tagline">Activez la valorisation de compétences et d'expériences&nbsp;!</p>
             <ul>
               <li>Processus de reconnaissance</li>
@@ -166,23 +157,27 @@
     <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
       <div class="container">
         <h2 class="sr-only" id="testimonials-title">Témoignages clients</h2>
-        <div class="testimonial-slider" id="testimonialSlider" aria-live="polite" aria-atomic="true">
+        <div class="testimonial-slider" id="testimonialSlider" aria-live="off" aria-atomic="true">
 
           <figure class="testimonial-slide active">
             <blockquote>
               <span class="testimonial__quote-mark" aria-hidden="true">"</span>
-              <p>Carla a transformé notre approche pédagogique avec une rigueur et une créativité remarquables. Nos formations sont désormais bien plus engageantes pour nos apprenants.</p>
+              <p>La Direction de l’Innovation Pédagogique de BUILDERS Ecole d’Ingénieurs a fait appel, cet été, à Carla Delépée pour l’organisation de deux événements marquants de l’école :
+                 Le colloque pédagogique IDDI25(1) (IDéation & DIdactique) les 26 et 27 juin derniers.
+                 Le dispositif CAP’25(2) pour l’accueil des élèves intégrant BUILDERS (Cohésion, Acculturation et Professionnalisation).
+                 Carla a accompagné l’équipe pédagogique dans l’organisation de ces deux événements et a pris en charge la valorisation par Open Badges : définition des compétences visées, création des badges et formation des utilisateurs.
+                 Je recommande vivement Carla pour son professionnalisme, son sérieux et son efficacité. J’ai pu observer son excellence académique, sa faculté d’adaptation, ainsi que sa capacité remarquable à résoudre des problèmes complexes. </p>
             </blockquote>
             <figcaption>
               <div class="testimonial__avatar" aria-hidden="true"></div>
               <div>
-                <cite>Marie Dupont</cite>
-                <span>Responsable formation, Organisme XYZ</span>
+                <cite>Marie Bagieu</cite>
+                <span>Directrice de l’Innovation Pédagogique à BUILDERS école d’ingénieurs</span>
               </div>
             </figcaption>
           </figure>
 
-          <figure class="testimonial-slide">
+          <figure class="testimonial-slide" aria-hidden="true">
             <blockquote>
               <span class="testimonial__quote-mark" aria-hidden="true">"</span>
               <p>Un accompagnement sur-mesure qui a réellement aligné nos formations sur les attentes terrain. La démarche par compétences a tout changé.</p>
@@ -196,7 +191,7 @@
             </figcaption>
           </figure>
 
-          <figure class="testimonial-slide">
+          <figure class="testimonial-slide" aria-hidden="true">
             <blockquote>
               <span class="testimonial__quote-mark" aria-hidden="true">"</span>
               <p>Grâce à Pédago'Up, nous avons mis en place une vraie politique d'accessibilité pédagogique. Un travail de fond, méthodique et humain.</p>
@@ -216,6 +211,9 @@
           <button class="dot" data-index="1" aria-label="Afficher le témoignage 2 sur 3" aria-pressed="false"></button>
           <button class="dot" data-index="2" aria-label="Afficher le témoignage 3 sur 3" aria-pressed="false"></button>
         </div>
+        <button class="testimonial-toggle" id="testimonialToggle" type="button" aria-pressed="false">
+          Mettre en pause les témoignages
+        </button>
       </div>
     </section>
 
@@ -223,7 +221,7 @@
     <section class="roadmap" id="roadmap" aria-labelledby="roadmap-title">
       <div class="container">
         <p class="section-label section-label--center">Notre démarche</p>
-        <h2 class="section-title" id="roadmap-title">Accompagnement 100&nbsp;% sur-mesure adapté à vos enjeux, à votre contexte</h2>
+        <h2 class="section-title" id="roadmap-title" tabindex="0">Accompagnement 100&nbsp;% sur-mesure adapté à vos enjeux, à votre contexte</h2>
         <p class="section-sub">En 4 étapes</p>
 
         <div class="roadmap__track">
@@ -235,7 +233,7 @@
 
           <ol class="roadmap__steps" aria-label="Les 4 étapes de la démarche">
 
-            <li class="roadmap__step" style="left:11.46%;top:51.5%">
+            <li class="roadmap__step" style="left:11.46%;top:51.5%" tabindex="0">
               <div class="step-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
                   <circle cx="9" cy="7" r="3" stroke="#F57C1F" stroke-width="1.8"/>
@@ -251,7 +249,7 @@
               </div>
             </li>
 
-            <li class="roadmap__step" style="left:37.5%;top:21.5%">
+            <li class="roadmap__step" style="left:37.5%;top:21.5%" tabindex="0">
               <div class="step-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
                   <circle cx="11" cy="11" r="7" stroke="#F57C1F" stroke-width="1.8"/>
@@ -265,7 +263,7 @@
               </div>
             </li>
 
-            <li class="roadmap__step" style="left:63.54%;top:41.5%">
+            <li class="roadmap__step" style="left:63.54%;top:41.5%" tabindex="0">
               <div class="step-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#F57C1F" stroke-width="1.8" stroke-linejoin="round"/>
@@ -278,7 +276,7 @@
               </div>
             </li>
 
-            <li class="roadmap__step" style="left:89.58%;top:11.5%">
+            <li class="roadmap__step" style="left:89.58%;top:11.5%" tabindex="0">
               <div class="step-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
                   <path d="M12 2s5 3.5 5 9a5 5 0 0 1-10 0c0-5.5 5-9 5-9z" stroke="#F57C1F" stroke-width="1.8" stroke-linejoin="round"/>
@@ -309,53 +307,45 @@
         <h2 id="faq-title">Questions fréquentes</h2>
         <div class="faq__list">
 
-          <div class="faq__item">
-            <h3 class="faq__question-heading">
-              <button class="faq__question" aria-expanded="false" aria-controls="panel-1" id="btn-faq-1">
-                Pour qui sont vos services&nbsp;?
-                <span class="faq__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="panel-1" class="faq__answer" role="region" aria-labelledby="btn-faq-1">
+          <details class="faq__item">
+            <summary class="faq__question">
+              Pour qui sont vos services&nbsp;?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__answer">
               <p>Mes services s'adressent aux <strong>organismes de formation</strong>, aux <strong>établissements d'enseignement supérieur</strong> et aux <strong>entreprises</strong> (PME) souhaitant améliorer ou créer leurs dispositifs de formation.</p>
             </div>
-          </div>
+          </details>
 
-          <div class="faq__item">
-            <h3 class="faq__question-heading">
-              <button class="faq__question" aria-expanded="false" aria-controls="panel-2" id="btn-faq-2">
-                Quels types de formations pouvez-vous concevoir&nbsp;?
-                <span class="faq__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="panel-2" class="faq__answer" role="region" aria-labelledby="btn-faq-2">
+          <details class="faq__item">
+            <summary class="faq__question">
+              Quels types de formations pouvez-vous concevoir&nbsp;?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__answer">
               <p>Je travaille sur des formations présentiel, distanciel et hybride, incluant la scénarisation, le développement de modules e-learning, la rédaction de contenus avec des experts métiers, la diffusion sur LMS et l'évaluation.</p>
             </div>
-          </div>
+          </details>
 
-          <div class="faq__item">
-            <h3 class="faq__question-heading">
-              <button class="faq__question" aria-expanded="false" aria-controls="panel-3" id="btn-faq-3">
-                Comment se déroule un accompagnement&nbsp;?
-                <span class="faq__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="panel-3" class="faq__answer" role="region" aria-labelledby="btn-faq-3">
+          <details class="faq__item">
+            <summary class="faq__question">
+              Comment se déroule un accompagnement&nbsp;?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__answer">
               <p>En 4 étapes&nbsp;: nous nous rencontrons, j'analyse vos besoins, je vous soumets une proposition sur-mesure, puis nous lançons la collaboration. Chaque projet est unique et co-construit avec vous.</p>
             </div>
-          </div>
+          </details>
 
-          <div class="faq__item">
-            <h3 class="faq__question-heading">
-              <button class="faq__question" aria-expanded="false" aria-controls="panel-4" id="btn-faq-4">
-                Qu'est-ce qu'un open badge&nbsp;?
-                <span class="faq__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="panel-4" class="faq__answer" role="region" aria-labelledby="btn-faq-4">
+          <details class="faq__item">
+            <summary class="faq__question">
+              Qu'est-ce qu'un open badge&nbsp;?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__answer">
               <p>Un open badge est une certification numérique vérifiable qui reconnaît et valorise des compétences ou des acquis d'expérience. Je vous accompagne dans la mise en place de ces processus de reconnaissance.</p>
             </div>
-          </div>
+          </details>
 
         </div>
       </div>
@@ -368,11 +358,14 @@
           <p class="section-label">Contact</p>
           <h2 id="contact-title">Échangeons&nbsp;!</h2>
           <p class="contact__sub">Décrivez-moi votre projet, je vous réponds sous 48&nbsp;h.</p>
-          <form class="form" action="#" method="post" novalidate aria-label="Formulaire de contact">
+          <form class="form" action="mailto:carla.delepee@pedago-up.fr" method="post" enctype="text/plain" aria-label="Formulaire de contact">
+            <p class="form__required-note" id="form-required-note">Les champs marqués d'un astérisque sont obligatoires.</p>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
             <div class="form__row">
               <div class="form__field">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name">
+                <label for="prenom">Prénom <span aria-hidden="true">*</span></label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name" required aria-describedby="form-required-note prenom-error">
+                <p class="form__error" id="prenom-error" aria-live="polite"></p>
               </div>
               <div class="form__field">
                 <label for="nom">Nom</label>
@@ -380,18 +373,20 @@
               </div>
             </div>
             <div class="form__field">
-              <label for="email">Adresse e-mail</label>
-              <input type="email" id="email" name="email" placeholder="votre@email.fr" autocomplete="email">
+              <label for="email">Adresse e-mail <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="votre@email.fr" autocomplete="email" required aria-describedby="form-required-note email-error">
+              <p class="form__error" id="email-error" aria-live="polite"></p>
             </div>
             <div class="form__field">
               <label for="organisation">Organisation</label>
               <input type="text" id="organisation" name="organisation" placeholder="Votre organisme ou entreprise" autocomplete="organization">
             </div>
             <div class="form__field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet pédagogique…"></textarea>
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet pédagogique…" required aria-describedby="form-required-note message-error"></textarea>
+              <p class="form__error" id="message-error" aria-live="polite"></p>
             </div>
-            <button type="submit" class="btn btn--primary">Envoyer le message</button>
+            <button type="submit" class="btn btn--primary">Envoyer la demande de contact</button>
           </form>
         </div>
         <div class="contact__info-col">
@@ -431,21 +426,22 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img src="assets/logo_trim.png" alt="Pédago'Up" class="logo-img logo-img--footer">
+        <img src="assets/logo_trim.avif" alt="Logo Pédago'Up" class="logo-img logo-img--footer" width="420" height="305">
         <p>Conseil et expertise pédagogique pour organismes de formation et PME</p>
       </div>
       <nav class="footer__nav" aria-label="Navigation secondaire">
-        <p class="footer__nav-title" aria-hidden="true">Navigation</p>
+        <p class="footer__nav-title">Navigation</p>
         <ul>
           <li><a href="#presentation">À propos</a></li>
           <li><a href="#solutions">Nos services</a></li>
+          <li><a href="#testimonials">Témoignages</a></li>
           <li><a href="#roadmap">Démarche</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="footer__social">
-        <p class="footer__nav-title" aria-hidden="true">Suivez-moi</p>
+        <p class="footer__nav-title">Suivez-moi</p>
         <a href="https://www.linkedin.com/in/carla-delépée-b7146a33/" target="_blank" rel="noopener noreferrer" class="social-link">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.22 0z"/></svg>
           LinkedIn de Carla Delépée
@@ -454,7 +450,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2025 Pédago'Up — Carla Delépée · Membre de <a href="https://creacoop14.fr" target="_blank" rel="noopener noreferrer">Créacoop&nbsp;14<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></a></p>
+      <p>© 2026 Pédago'Up — Carla Delépée · Membre de <a href="https://creacoop14.fr" target="_blank" rel="noopener noreferrer">Créacoop&nbsp;14<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></a></p>
     </div>
   </footer>
 
