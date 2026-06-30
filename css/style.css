@@ -638,14 +638,57 @@ blockquote {
   margin: 0 auto;
 }
 
-.testimonial__quote-mark {
+.testimonial__quote-mark--open,
+.testimonial__quote-mark--close {
   font-family: var(--font-head);
-  font-size: 5rem;
-  line-height: .5;
+  font-size: 3rem;
+  line-height: 0;
   color: var(--orange);
   opacity: .2;
-  display: block;
-  margin-bottom: 12px;
+  display: inline;
+  vertical-align: -0.3em;
+  margin-left: 4px;
+}
+
+.testimonial__quote-mark--open {
+  margin-right: 4px;
+}
+
+.testimonial-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-nav .testimonial-slider {
+  flex: 1;
+  min-width: 0;
+}
+
+.testimonial-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--orange);
+  background: transparent;
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+  z-index: 1;
+}
+
+.testimonial-arrow:hover {
+  background: var(--orange);
+  color: #fff;
+}
+
+.testimonial-arrow:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
 }
 
 blockquote p {

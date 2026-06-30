@@ -45,7 +45,6 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="badge">Normandie · Formation &amp; Conseil</p>
           <h1 class="hero__title" id="hero-title">
             L'innovation pédagogique
             <em>au cœur de formations</em>
@@ -157,16 +156,19 @@
     <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
       <div class="container">
         <h2 class="sr-only" id="testimonials-title">Témoignages clients</h2>
-        <div class="testimonial-slider" id="testimonialSlider" aria-live="off" aria-atomic="true">
+        <div class="testimonial-nav">
+          <button class="testimonial-arrow testimonial-arrow--prev" id="testimonialPrev" type="button" aria-label="Témoignage précédent">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="testimonial-slider" id="testimonialSlider" aria-live="off" aria-atomic="true">
 
           <figure class="testimonial-slide active">
             <blockquote>
-              <span class="testimonial__quote-mark" aria-hidden="true">"</span>
-              <p>La Direction de l’Innovation Pédagogique de BUILDERS Ecole d’Ingénieurs a fait appel, cet été, à Carla Delépée pour l’organisation de deux événements marquants de l’école :
+              <p><span class="testimonial__quote-mark--open" aria-hidden="true">"</span>La Direction de l’Innovation Pédagogique de BUILDERS Ecole d’Ingénieurs a fait appel, cet été, à Carla Delépée pour l’organisation de deux événements marquants de l’école :
                  Le colloque pédagogique IDDI25(1) (IDéation & DIdactique) les 26 et 27 juin derniers.
                  Le dispositif CAP’25(2) pour l’accueil des élèves intégrant BUILDERS (Cohésion, Acculturation et Professionnalisation).
                  Carla a accompagné l’équipe pédagogique dans l’organisation de ces deux événements et a pris en charge la valorisation par Open Badges : définition des compétences visées, création des badges et formation des utilisateurs.
-                 Je recommande vivement Carla pour son professionnalisme, son sérieux et son efficacité. J’ai pu observer son excellence académique, sa faculté d’adaptation, ainsi que sa capacité remarquable à résoudre des problèmes complexes. </p>
+                 Je recommande vivement Carla pour son professionnalisme, son sérieux et son efficacité. J’ai pu observer son excellence académique, sa faculté d’adaptation, ainsi que sa capacité remarquable à résoudre des problèmes complexes. <span class="testimonial__quote-mark--close" aria-hidden="true">"</span></p>
             </blockquote>
             <figcaption>
               <div class="testimonial__avatar" aria-hidden="true"></div>
@@ -179,8 +181,7 @@
 
           <figure class="testimonial-slide" aria-hidden="true">
             <blockquote>
-              <span class="testimonial__quote-mark" aria-hidden="true">"</span>
-              <p>Un accompagnement sur-mesure qui a réellement aligné nos formations sur les attentes terrain. La démarche par compétences a tout changé.</p>
+              <p><span class="testimonial__quote-mark--open" aria-hidden="true">"</span>Un accompagnement sur-mesure qui a réellement aligné nos formations sur les attentes terrain. La démarche par compétences a tout changé. <span class="testimonial__quote-mark--close" aria-hidden="true">"</span></p>
             </blockquote>
             <figcaption>
               <div class="testimonial__avatar" aria-hidden="true"></div>
@@ -193,8 +194,7 @@
 
           <figure class="testimonial-slide" aria-hidden="true">
             <blockquote>
-              <span class="testimonial__quote-mark" aria-hidden="true">"</span>
-              <p>Grâce à Pédago'Up, nous avons mis en place une vraie politique d'accessibilité pédagogique. Un travail de fond, méthodique et humain.</p>
+              <p><span class="testimonial__quote-mark--open" aria-hidden="true">"</span>Grâce à Pédago'Up, nous avons mis en place une vraie politique d'accessibilité pédagogique. Un travail de fond, méthodique et humain. <span class="testimonial__quote-mark--close" aria-hidden="true">"</span></p>
             </blockquote>
             <figcaption>
               <div class="testimonial__avatar" aria-hidden="true"></div>
@@ -205,6 +205,10 @@
             </figcaption>
           </figure>
 
+        </div>
+          <button class="testimonial-arrow testimonial-arrow--next" id="testimonialNext" type="button" aria-label="Témoignage suivant">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
         <div class="testimonial-dots" id="testimonialDots" role="group" aria-label="Navigation des témoignages">
           <button class="dot active" data-index="0" aria-label="Afficher le témoignage 1 sur 3" aria-pressed="true"></button>

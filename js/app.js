@@ -91,6 +91,8 @@ const slider = document.getElementById('testimonialSlider');
 const slides = document.querySelectorAll('.testimonial-slide');
 const dots = document.querySelectorAll('.dot');
 const toggle = document.getElementById('testimonialToggle');
+const prevBtn = document.getElementById('testimonialPrev');
+const nextBtn = document.getElementById('testimonialNext');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 function getScrollOffset() {
@@ -260,6 +262,20 @@ dots.forEach(dot => {
     updatePauseButton();
     goTo(Number(dot.dataset.index), { announce: true });
   });
+});
+
+prevBtn?.addEventListener('click', () => {
+  isManualPaused = true;
+  stopAuto();
+  updatePauseButton();
+  goTo(current - 1, { announce: true });
+});
+
+nextBtn?.addEventListener('click', () => {
+  isManualPaused = true;
+  stopAuto();
+  updatePauseButton();
+  goTo(current + 1, { announce: true });
 });
 
 toggle?.addEventListener('click', () => {
