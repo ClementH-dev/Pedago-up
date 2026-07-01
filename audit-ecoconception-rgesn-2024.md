@@ -14,9 +14,9 @@ Mesure locale actuelle :
 
 | Mesure | Valeur |
 |---|---:|
-| Taille totale du workspace audité | 224 902 octets |
-| Taille du dossier `assets/` | 131 132 octets |
-| Ressources first-party réellement appelées par la page | 209 583 octets |
+| Taille totale du workspace audité | 224 879 octets |
+| Taille du dossier `assets/` | 129 655 octets |
+| Ressources first-party réellement appelées par la page | 209 323 octets |
 | PDF RGESN dans `assets/` | Absent |
 | PNG sources non utilisés par `index.html` | 0 octet |
 
@@ -44,7 +44,7 @@ Conclusion : la page appelée par l'utilisateur est légère. Le PDF du référe
 | Carrousel des témoignages en pause au chargement : l'utilisateur choisit explicitement de lancer le défilement. | RGESN 4.1, 4.15 | `js/app.js` |
 | Bulles de la section "Notre démarche" rendues survolables et masquables avec la touche `Escape`. | RGAA 4.1.2 - critère 10.13 | `css/style.css`, `js/app.js` |
 | Remplacement des textes lorem ipsum des bulles par un contenu métier court, lié aux étapes de collaboration. | Qualité éditoriale, RGAA 9.1 | `index.html` |
-| Conversion de `Illustration_reunion_bureau.png` en `illustrationReunionBureau.avif`, remplacement de l'image de première section et suppression des bitmaps non utilisés, hors SVG conservés. | RGESN 5.1, 5.2, 6.5 | `index.html`, `assets/` |
+| Remplacement de l'illustration de première section par `illustrationFormation.avif` et suppression de l'ancienne image hero inutilisée ainsi que du PNG source après conversion. | RGESN 5.1, 5.2, 6.5 | `index.html`, `assets/` |
 | Ajout d'une section "Réseaux" en défilement manuel, sans autoplay, avec logos locaux convertis en AVIF et sources PNG/JPG supprimées. | RGESN 4.1, 5.1, 5.2, 6.5 ; RGAA navigation clavier | `index.html`, `css/style.css`, `js/app.js`, `assets/` |
 
 ## Tâches prioritaires
