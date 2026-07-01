@@ -359,6 +359,59 @@ document.querySelectorAll('.roadmap__step').forEach(step => {
   });
 });
 
+const networksViewport = document.getElementById('networksTrack');
+const networkSlides = document.querySelectorAll('.network-card');
+const networkDots = document.querySelectorAll('#networksDots .dot');
+const networksPrev = document.getElementById('networksPrev');
+const networksNext = document.getElementById('networksNext');
+let currentNetwork = 0;
+
+function updateNetworksControls() {
+  if (!networkSlides.length || !networksPrev || !networksNext) return;
+  networksPrev.disabled = networkSlides.length < 2;
+  networksNext.disabled = networkSlides.length < 2;
+}
+
+function goToNetwork(index, { announce = false } = {}) {
+  if (!networkSlides.length) return;
+
+  networksViewport?.setAttribute('aria-live', announce ? 'polite' : 'off');
+
+  networkSlides[currentNetwork].classList.remove('active');
+  networkSlides[currentNetwork].setAttribute('aria-hidden', 'true');
+  networkDots[currentNetwork]?.classList.remove('active');
+  networkDots[currentNetwork]?.setAttribute('aria-pressed', 'false');
+
+  currentNetwork = (index + networkSlides.length) % networkSlides.length;
+
+  networkSlides[currentNetwork].classList.add('active');
+  networkSlides[currentNetwork].removeAttribute('aria-hidden');
+  networkDots[currentNetwork]?.classList.add('active');
+  networkDots[currentNetwork]?.setAttribute('aria-pressed', 'true');
+}
+
+networkDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    goToNetwork(Number(dot.dataset.index), { announce: true });
+  });
+});
+
+networksPrev?.addEventListener('click', () => goToNetwork(currentNetwork - 1, { announce: true }));
+networksNext?.addEventListener('click', () => goToNetwork(currentNetwork + 1, { announce: true }));
+window.addEventListener('load', updateNetworksControls);
+window.addEventListener('resize', updateNetworksControls);
+
+if (networkSlides.length) {
+  networkSlides.forEach((slide, index) => {
+    if (index === currentNetwork) {
+      slide.removeAttribute('aria-hidden');
+    } else {
+      slide.setAttribute('aria-hidden', 'true');
+    }
+  });
+  updateNetworksControls();
+}
+
 reducedMotion.addEventListener('change', () => {
   updatePauseButton();
   startAuto();

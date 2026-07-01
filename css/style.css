@@ -946,9 +946,138 @@ figcaption span {
   margin-top: 44px;
 }
 
-/* ═══════════════════════════════════════════ 07 FAQ ════════ */
+/* ═══════════════════════════════════════ 07 NETWORKS ═══════ */
+.networks {
+  padding: 76px 0;
+  background: var(--grey-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.networks__inner {
+  position: relative;
+}
+
+.networks__header {
+  max-width: 760px;
+  margin: 0 auto 28px;
+}
+
+.networks__carousel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.networks__viewport {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  min-height: 330px;
+}
+
+.networks__list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.network-card {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity .35s ease, transform .35s ease, visibility .35s ease;
+}
+
+.network-card.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.network-card a {
+  width: min(520px, 100%);
+  min-height: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--orange-light);
+  color: var(--text);
+  transition: border-color .18s, background .18s, box-shadow .18s;
+}
+
+.network-card a:hover,
+.network-card a:focus-visible {
+  background: var(--white);
+  border-color: var(--orange-deep);
+  box-shadow: 0 14px 28px rgba(13, 27, 140, .1);
+}
+
+.network-card__logo {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 12px;
+}
+
+.network-card__logo--dark {
+  background: #1C1642;
+}
+
+.network-card__logo img {
+  max-width: 100%;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.network-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.network-card__role {
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--orange-deep);
+}
+
+.network-card__name {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--blue);
+}
+
+.network-card__desc {
+  font-size: .92rem;
+  line-height: 1.5;
+}
+
+.networks__dots {
+  margin-top: 22px;
+}
+
+/* ═══════════════════════════════════════════ 08 FAQ ════════ */
 .faq {
   padding: 88px 0;
+  background: var(--white);
 }
 
 .faq__inner {
@@ -1435,6 +1564,22 @@ figcaption span {
 
   .solutions__grid {
     grid-template-columns: 1fr;
+  }
+
+  .networks {
+    padding: 64px 0 40px;
+  }
+
+  .networks__carousel {
+    gap: 8px;
+  }
+
+  .networks__viewport {
+    min-height: 350px;
+  }
+
+  .network-card a {
+    padding: 20px;
   }
 
   .contact__inner {
