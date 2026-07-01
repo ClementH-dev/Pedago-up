@@ -370,8 +370,9 @@
                 <p class="form__error" id="prenom-error" aria-live="polite"></p>
               </div>
               <div class="form__field">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name">
+                <label for="nom">Nom <span aria-hidden="true">*</span></label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name" required aria-describedby="form-required-note nom-error">
+                <p class="form__error" id="nom-error" aria-live="polite"></p>
               </div>
             </div>
             <div class="form__field">
