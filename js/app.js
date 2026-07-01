@@ -94,6 +94,7 @@ const toggle = document.getElementById('testimonialToggle');
 const prevBtn = document.getElementById('testimonialPrev');
 const nextBtn = document.getElementById('testimonialNext');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const TESTIMONIAL_AUTO_DELAY_MS = 9000;
 
 function getScrollOffset() {
   const navbar = document.querySelector('.navbar');
@@ -282,7 +283,7 @@ function goTo(index, { announce = false } = {}) {
 function startAuto() {
   stopAuto();
   if (slides.length < 2 || isManualPaused || isInteractionPaused || reducedMotion.matches) return;
-  autoTimer = setInterval(() => goTo(current + 1), 5000);
+  autoTimer = setInterval(() => goTo(current + 1), TESTIMONIAL_AUTO_DELAY_MS);
 }
 
 dots.forEach(dot => {
