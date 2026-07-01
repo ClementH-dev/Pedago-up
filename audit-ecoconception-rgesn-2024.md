@@ -14,13 +14,13 @@ Mesure locale actuelle :
 
 | Mesure | Valeur |
 |---|---:|
-| Taille totale du workspace audité | 546 985 octets |
-| Taille du dossier `assets/` | 462 123 octets |
-| Ressources first-party réellement appelées par la page | 140 398 octets |
+| Taille totale du workspace audité | 185 921 octets |
+| Taille du dossier `assets/` | 100 291 octets |
+| Ressources first-party réellement appelées par la page | 170 758 octets |
 | PDF RGESN dans `assets/` | Absent |
-| PNG sources non utilisés par `index.html` | 360 561 octets |
+| PNG sources non utilisés par `index.html` | 0 octet |
 
-Conclusion : la page appelée par l'utilisateur est légère. Le PDF du référentiel n'est plus dans le repository, ce qui corrige l'ancien point bloquant. Le dossier public contient encore des fichiers sources qui ne sont pas appelés par la page.
+Conclusion : la page appelée par l'utilisateur est légère. Le PDF du référentiel n'est plus dans le repository, et les images PNG sources non utilisées ont été retirées du dossier public. Les SVG décoratifs restent présents comme demandé.
 
 ## Ce qui est déjà correct
 
@@ -44,6 +44,7 @@ Conclusion : la page appelée par l'utilisateur est légère. Le PDF du référe
 | Carrousel des témoignages en pause au chargement : l'utilisateur choisit explicitement de lancer le défilement. | RGESN 4.1, 4.15 | `js/app.js` |
 | Bulles de la section "Notre démarche" rendues survolables et masquables avec la touche `Escape`. | RGAA 4.1.2 - critère 10.13 | `css/style.css`, `js/app.js` |
 | Remplacement des textes lorem ipsum des bulles par un contenu métier court, lié aux étapes de collaboration. | Qualité éditoriale, RGAA 9.1 | `index.html` |
+| Conversion de `Illustration_reunion_bureau.png` en `illustrationReunionBureau.avif`, remplacement de l'image de première section et suppression des bitmaps non utilisés, hors SVG conservés. | RGESN 5.1, 5.2, 6.5 | `index.html`, `assets/` |
 
 ## Tâches prioritaires
 
@@ -52,7 +53,7 @@ Conclusion : la page appelée par l'utilisateur est légère. Le PDF du référe
 | ID | Critère RGESN | Problème constaté | Correction claire | Fichiers concernés | Validation |
 |---|---|---|---|---|---|
 | ECO-01 | 5.7, 6.5 | Corrigé : le PDF RGESN n'est plus présent dans `assets` et n'est pas versionné dans le repository. | Maintenir cette règle : les PDF de travail et référentiels d'audit restent hors dossier public ou exclus du déploiement. | Repository, configuration de déploiement | Aucun fichier `.pdf` n'est présent dans `assets/` ni accessible depuis l'URL publique. |
-| ECO-02 | 6.5, 5.8 | Des fichiers sources non utilisés sont dans `assets/` : `pedagoUp_BW.png`, `logo_pedagoup.png`, `logo_trim.png`, `pedagoUp_BW.avif`, `logo_pedagoup.avif`, `Group 1.svg`, `Ellipse 1.svg`, `Ellipse 3.svg`. | Ne garder en production que les assets appelés par `index.html`. Déplacer les sources dans un dossier non déployé ou les supprimer si elles ne servent plus. | `assets/` | `Select-String index.html` ne référence que les fichiers présents dans le dossier public. |
+| ECO-02 | 6.5, 5.8 | Corrigé pour les bitmaps : les PNG sources et AVIF non appelés par la page ont été supprimés. Les SVG sont conservés volontairement. | Maintenir cette règle : ne garder en production que les assets appelés par `index.html`, sauf SVG décoratifs explicitement conservés. | `assets/` | `Select-String index.html` ne référence que les images bitmap présentes dans le dossier public. |
 | ECO-03 | 4.8, 6.7, 2.10 | Corrigé : les polices Google ne sont plus chargées. | Maintenir cette règle : ne pas réintroduire de police externe sans justification. Si une police de marque est nécessaire, l'auto-héberger et limiter les variantes. | `index.html`, `css/style.css`, éventuellement `assets/fonts/` | Plus aucun appel à `fonts.googleapis.com` ou `fonts.gstatic.com` dans l'onglet réseau. |
 | ECO-04 | 6.1 | Aucun budget de poids/requêtes n'est défini. | Ajouter un budget mesurable : page initiale <= 250 Ko compressés hors cache, page complète <= 500 Ko, <= 20 requêtes au premier chargement, 0 ressource inutilisée volontaire. | Documentation projet | Lighthouse ou DevTools Network respecte le budget sur une navigation privée sans cache. |
 | ECO-05 | 6.2, 6.3 | La stratégie cache/compression dépend de l'hébergement et n'est pas documentée. | Configurer en production : HTML avec cache court, assets versionnés avec cache long, Brotli ou Gzip pour HTML/CSS/JS/SVG. | Configuration hébergeur | Réponses HTTP avec `cache-control` cohérent et `content-encoding: br` ou `gzip`. |
