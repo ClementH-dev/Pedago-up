@@ -313,72 +313,51 @@
     </section>
 
     <!-- ══════════════════════════════════════ 07 - RÉSEAUX ═════ -->
-    <section class="networks networks--banner" id="networks" aria-labelledby="networks-title">
+    <section class="networks networks--grid" id="networks" aria-labelledby="networks-title">
       <div class="container networks__inner">
         <div class="networks__header">
           <p class="section-label section-label--center">Réseaux</p>
           <h2 class="section-title" id="networks-title">Les réseaux auxquels j'appartiens</h2>
         </div>
 
-        <div class="networks__carousel">
-          <button class="testimonial-arrow networks__arrow networks__arrow--prev" type="button" id="networksPrev" aria-label="Réseau précédent" aria-controls="networksTrack">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-
-          <div class="networks__viewport" id="networksTrack" aria-live="off" aria-atomic="true">
-            <ul class="networks__list">
-              <li class="network-card active">
-                <a href="https://normandiepionnieres.fr/" target="_blank" rel="noopener noreferrer" aria-label="Normandie Pionnières - site externe">
-                  <span class="network-card__logo network-card__logo--dark">
-                    <img src="assets/normandiePionnieres.avif" alt="Normandie Pionnières" width="220" height="96" loading="lazy" decoding="async">
-                  </span>
-                  <span class="network-card__content">
-                    <span class="network-card__role">Co-animatrice des matinales à Caen</span>
-                    <span class="network-card__name">Normandie Pionnières</span>
-                    <span class="network-card__desc">Réseau dédié à l'entrepreneuriat féminin en Normandie.</span>
-                  </span>
-                </a>
-              </li>
-              <li class="network-card">
-                <a href="https://www.lisis.org/" target="_blank" rel="noopener noreferrer" aria-label="LISIS - site externe">
-                  <span class="network-card__logo">
-                    <img src="assets/lisis.avif" alt="LISIS" width="220" height="96" loading="lazy" decoding="async">
-                  </span>
-                  <span class="network-card__content">
-                    <span class="network-card__role">Membre du comité scientifique</span>
-                    <span class="network-card__name">LISIS</span>
-                    <span class="network-card__desc">Laboratoire international sur l'inclusion scolaire.</span>
-                  </span>
-                </a>
-              </li>
-              <li class="network-card">
-                <a href="https://www.linkedin.com/showcase/ap%C3%A9ro-p%C3%A9dago-caen/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="Apéro Pédago Caen - page LinkedIn externe">
-                  <span class="network-card__logo">
-                    <img src="assets/aperoPedagoCaen.avif" alt="Apéro Pédago Caen" width="220" height="96" loading="lazy" decoding="async">
-                  </span>
-                  <span class="network-card__content">
-                    <span class="network-card__role">Co-animatrice</span>
-                    <span class="network-card__name">Apéro Pédago Caen</span>
-                    <span class="network-card__desc">Rencontres locales autour des pratiques pédagogiques.</span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <button class="testimonial-arrow networks__arrow networks__arrow--next" type="button" id="networksNext" aria-label="Réseau suivant" aria-controls="networksTrack">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-
-        <div class="testimonial-dots networks__dots" id="networksDots" role="group" aria-label="Navigation des réseaux">
-          <button class="dot active" type="button" data-index="0" aria-label="Afficher Normandie Pionnières" aria-pressed="true"></button>
-          <button class="dot" type="button" data-index="1" aria-label="Afficher LISIS" aria-pressed="false"></button>
-          <button class="dot" type="button" data-index="2" aria-label="Afficher Apéro Pédago Caen" aria-pressed="false"></button>
-        </div>
-        <button class="testimonial-toggle networks__toggle" id="networksToggle" type="button" aria-pressed="false">
-          Lancer le défilement des réseaux
-        </button>
+        <ul class="networks__list networks__list--grid">
+          <li class="network-card active">
+            <a href="https://normandiepionnieres.fr/" target="_blank" rel="noopener noreferrer" aria-label="Normandie Pionnières - site externe">
+              <span class="network-card__logo network-card__logo--dark">
+                <img src="assets/normandiePionnieres.avif" alt="Normandie Pionnières" width="220" height="96" loading="lazy" decoding="async">
+              </span>
+              <span class="network-card__content">
+                <span class="network-card__role">Co-animatrice des matinales à Caen</span>
+                <span class="network-card__name">Normandie Pionnières</span>
+                <span class="network-card__desc">Réseau dédié à l'entrepreneuriat féminin en Normandie.</span>
+              </span>
+            </a>
+          </li>
+          <li class="network-card active">
+            <a href="https://www.lisis.org/" target="_blank" rel="noopener noreferrer" aria-label="LISIS - site externe">
+              <span class="network-card__logo">
+                <img src="assets/lisis.avif" alt="LISIS" width="220" height="96" loading="lazy" decoding="async">
+              </span>
+              <span class="network-card__content">
+                <span class="network-card__role">Membre du comité scientifique</span>
+                <span class="network-card__name">LISIS</span>
+                <span class="network-card__desc">Laboratoire international sur l'inclusion scolaire.</span>
+              </span>
+            </a>
+          </li>
+          <li class="network-card active">
+            <a href="https://www.linkedin.com/showcase/ap%C3%A9ro-p%C3%A9dago-caen/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="Apéro Pédago Caen - page LinkedIn externe">
+              <span class="network-card__logo">
+                <img src="assets/aperoPedagoCaen.avif" alt="Apéro Pédago Caen" width="220" height="96" loading="lazy" decoding="async">
+              </span>
+              <span class="network-card__content">
+                <span class="network-card__role">Co-animatrice</span>
+                <span class="network-card__name">Apéro Pédago Caen</span>
+                <span class="network-card__desc">Rencontres locales autour des pratiques pédagogiques.</span>
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
