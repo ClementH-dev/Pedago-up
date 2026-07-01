@@ -89,12 +89,13 @@ nav?.querySelectorAll('a').forEach(link => {
 // ── Testimonial slider ─────────────────────────────────────
 const slider = document.getElementById('testimonialSlider');
 const slides = document.querySelectorAll('.testimonial-slide');
-const dots = document.querySelectorAll('.dot');
+const dots = document.querySelectorAll('#testimonialDots .dot');
 const toggle = document.getElementById('testimonialToggle');
 const prevBtn = document.getElementById('testimonialPrev');
 const nextBtn = document.getElementById('testimonialNext');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const TESTIMONIAL_AUTO_DELAY_MS = 9000;
+const CARD_CAROUSEL_AUTO_DELAY_MS = 9000;
 
 function getScrollOffset() {
   const navbar = document.querySelector('.navbar');
@@ -359,58 +360,186 @@ document.querySelectorAll('.roadmap__step').forEach(step => {
   });
 });
 
-const networksViewport = document.getElementById('networksTrack');
-const networkSlides = document.querySelectorAll('.network-card');
-const networkDots = document.querySelectorAll('#networksDots .dot');
-const networksPrev = document.getElementById('networksPrev');
-const networksNext = document.getElementById('networksNext');
-let currentNetwork = 0;
+function initCardCarousel({
+  rootSelector,
+  viewportId,
+  dotsId,
+  prevId,
+  nextId,
+  toggleId,
+  startText,
+  pauseText,
+  suspendedText,
+}) {
+  const root = document.querySelector(rootSelector);
+  const viewport = document.getElementById(viewportId);
+  const cardSlides = root?.querySelectorAll('.network-card') ?? [];
+  const cardDots = document.querySelectorAll(`#${dotsId} .dot`);
+  const prev = document.getElementById(prevId);
+  const next = document.getElementById(nextId);
+  const autoToggle = document.getElementById(toggleId);
+  let currentCard = 0;
+  let cardTimer;
+  let isCardManualPaused = true;
+  let isCardInteractionPaused = false;
 
-function updateNetworksControls() {
-  if (!networkSlides.length || !networksPrev || !networksNext) return;
-  networksPrev.disabled = networkSlides.length < 2;
-  networksNext.disabled = networkSlides.length < 2;
-}
+  function stopCardAuto() {
+    clearInterval(cardTimer);
+    cardTimer = undefined;
+  }
 
-function goToNetwork(index, { announce = false } = {}) {
-  if (!networkSlides.length) return;
+  function updateCardControls() {
+    if (!cardSlides.length || !prev || !next) return;
+    prev.disabled = cardSlides.length < 2;
+    next.disabled = cardSlides.length < 2;
+  }
 
-  networksViewport?.setAttribute('aria-live', announce ? 'polite' : 'off');
+  function updateCardToggle() {
+    if (!autoToggle) return;
+    if (reducedMotion.matches) {
+      autoToggle.disabled = true;
+      autoToggle.setAttribute('aria-pressed', 'true');
+      autoToggle.textContent = 'Défilement automatique désactivé';
+      return;
+    }
 
-  networkSlides[currentNetwork].classList.remove('active');
-  networkSlides[currentNetwork].setAttribute('aria-hidden', 'true');
-  networkDots[currentNetwork]?.classList.remove('active');
-  networkDots[currentNetwork]?.setAttribute('aria-pressed', 'false');
+    autoToggle.disabled = cardSlides.length < 2;
+    if (isCardManualPaused) {
+      autoToggle.setAttribute('aria-pressed', 'true');
+      autoToggle.textContent = startText;
+      return;
+    }
 
-  currentNetwork = (index + networkSlides.length) % networkSlides.length;
+    autoToggle.setAttribute('aria-pressed', 'false');
+    autoToggle.textContent = isCardInteractionPaused ? suspendedText : pauseText;
+  }
 
-  networkSlides[currentNetwork].classList.add('active');
-  networkSlides[currentNetwork].removeAttribute('aria-hidden');
-  networkDots[currentNetwork]?.classList.add('active');
-  networkDots[currentNetwork]?.setAttribute('aria-pressed', 'true');
-}
+  function goToCard(index, { announce = false } = {}) {
+    if (!cardSlides.length) return;
 
-networkDots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    goToNetwork(Number(dot.dataset.index), { announce: true });
+    viewport?.setAttribute('aria-live', announce ? 'polite' : 'off');
+
+    cardSlides[currentCard].classList.remove('active');
+    cardSlides[currentCard].setAttribute('aria-hidden', 'true');
+    cardDots[currentCard]?.classList.remove('active');
+    cardDots[currentCard]?.setAttribute('aria-pressed', 'false');
+
+    currentCard = (index + cardSlides.length) % cardSlides.length;
+
+    cardSlides[currentCard].classList.add('active');
+    cardSlides[currentCard].removeAttribute('aria-hidden');
+    cardDots[currentCard]?.classList.add('active');
+    cardDots[currentCard]?.setAttribute('aria-pressed', 'true');
+  }
+
+  function startCardAuto() {
+    stopCardAuto();
+    if (
+      cardSlides.length < 2 ||
+      isCardManualPaused ||
+      isCardInteractionPaused ||
+      reducedMotion.matches
+    ) {
+      return;
+    }
+
+    cardTimer = setInterval(() => goToCard(currentCard + 1), CARD_CAROUSEL_AUTO_DELAY_MS);
+  }
+
+  cardDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      isCardManualPaused = true;
+      stopCardAuto();
+      updateCardToggle();
+      goToCard(Number(dot.dataset.index), { announce: true });
+    });
   });
-});
 
-networksPrev?.addEventListener('click', () => goToNetwork(currentNetwork - 1, { announce: true }));
-networksNext?.addEventListener('click', () => goToNetwork(currentNetwork + 1, { announce: true }));
-window.addEventListener('load', updateNetworksControls);
-window.addEventListener('resize', updateNetworksControls);
+  prev?.addEventListener('click', () => {
+    isCardManualPaused = true;
+    stopCardAuto();
+    updateCardToggle();
+    goToCard(currentCard - 1, { announce: true });
+  });
 
-if (networkSlides.length) {
-  networkSlides.forEach((slide, index) => {
-    if (index === currentNetwork) {
-      slide.removeAttribute('aria-hidden');
+  next?.addEventListener('click', () => {
+    isCardManualPaused = true;
+    stopCardAuto();
+    updateCardToggle();
+    goToCard(currentCard + 1, { announce: true });
+  });
+
+  autoToggle?.addEventListener('click', () => {
+    if (reducedMotion.matches || cardSlides.length < 2) return;
+
+    isCardManualPaused = !isCardManualPaused;
+    updateCardToggle();
+    if (isCardManualPaused) {
+      stopCardAuto();
     } else {
-      slide.setAttribute('aria-hidden', 'true');
+      startCardAuto();
     }
   });
-  updateNetworksControls();
+
+  root?.addEventListener('focusin', () => {
+    isCardInteractionPaused = true;
+    stopCardAuto();
+    updateCardToggle();
+  });
+
+  root?.addEventListener('focusout', event => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      isCardInteractionPaused = false;
+      updateCardToggle();
+      startCardAuto();
+    }
+  });
+
+  reducedMotion.addEventListener('change', () => {
+    updateCardToggle();
+    startCardAuto();
+  });
+
+  window.addEventListener('load', updateCardControls);
+  window.addEventListener('resize', updateCardControls);
+
+  if (cardSlides.length) {
+    cardSlides.forEach((slide, index) => {
+      if (index === currentCard) {
+        slide.removeAttribute('aria-hidden');
+      } else {
+        slide.setAttribute('aria-hidden', 'true');
+      }
+    });
+    updateCardControls();
+    updateCardToggle();
+    startCardAuto();
+  }
 }
+
+initCardCarousel({
+  rootSelector: '#networks',
+  viewportId: 'networksTrack',
+  dotsId: 'networksDots',
+  prevId: 'networksPrev',
+  nextId: 'networksNext',
+  toggleId: 'networksToggle',
+  startText: 'Lancer le défilement des réseaux',
+  pauseText: 'Mettre en pause les réseaux',
+  suspendedText: 'Défilement suspendu pendant la navigation clavier',
+});
+
+initCardCarousel({
+  rootSelector: '#trusted',
+  viewportId: 'trustedTrack',
+  dotsId: 'trustedDots',
+  prevId: 'trustedPrev',
+  nextId: 'trustedNext',
+  toggleId: 'trustedToggle',
+  startText: 'Lancer le défilement des références',
+  pauseText: 'Mettre en pause les références',
+  suspendedText: 'Défilement suspendu pendant la navigation clavier',
+});
 
 reducedMotion.addEventListener('change', () => {
   updatePauseButton();

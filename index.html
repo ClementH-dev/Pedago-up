@@ -376,10 +376,83 @@
           <button class="dot" type="button" data-index="1" aria-label="Afficher LISIS" aria-pressed="false"></button>
           <button class="dot" type="button" data-index="2" aria-label="Afficher Apéro Pédago Caen" aria-pressed="false"></button>
         </div>
+        <button class="testimonial-toggle networks__toggle" id="networksToggle" type="button" aria-pressed="false">
+          Lancer le défilement des réseaux
+        </button>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════ 08 - FAQ ════════ -->
+    <!-- ═══════════════════════════════ 08 - CONFIANCE ════════ -->
+    <section class="networks trusted" id="trusted" aria-labelledby="trusted-title">
+      <div class="container networks__inner">
+        <div class="networks__header">
+          <p class="section-label section-label--center">Ils me font confiance</p>
+          <h2 class="section-title" id="trusted-title">Des partenaires accompagnés dans leurs projets pédagogiques</h2>
+        </div>
+
+        <div class="networks__carousel">
+          <button class="testimonial-arrow networks__arrow networks__arrow--prev" type="button" id="trustedPrev" aria-label="Référence précédente" aria-controls="trustedTrack">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="networks__viewport" id="trustedTrack" aria-live="off" aria-atomic="true">
+            <ul class="networks__list">
+              <li class="network-card active">
+                <a href="https://builders-ingenieurs.fr/" target="_blank" rel="noopener noreferrer" aria-label="BUILDERS école d'ingénieurs - site externe">
+                  <span class="network-card__logo">
+                    <img src="assets/builders.avif" alt="BUILDERS école d'ingénieurs" width="220" height="96" loading="lazy" decoding="async">
+                  </span>
+                  <span class="network-card__content">
+                    <span class="network-card__role">École d'ingénieurs</span>
+                    <span class="network-card__name">BUILDERS école d'ingénieurs</span>
+                    <span class="network-card__desc">Accompagnement de projets d'innovation pédagogique et de valorisation par open badges.</span>
+                  </span>
+                </a>
+              </li>
+              <li class="network-card" aria-hidden="true">
+                <a href="https://www.e2cnormandie.fr/" target="_blank" rel="noopener noreferrer" aria-label="E2C Normandie - site externe">
+                  <span class="network-card__logo">
+                    <img src="assets/e2cNormandie.avif" alt="E2C Normandie" width="220" height="96" loading="lazy" decoding="async">
+                  </span>
+                  <span class="network-card__content">
+                    <span class="network-card__role">École de la deuxième chance</span>
+                    <span class="network-card__name">E2C Normandie</span>
+                    <span class="network-card__desc">Collaboration autour de dispositifs pédagogiques adaptés aux besoins des publics accompagnés.</span>
+                  </span>
+                </a>
+              </li>
+              <li class="network-card" aria-hidden="true">
+                <span class="network-card__static" aria-label="La Forge, Laure Letenneur Formation">
+                  <span class="network-card__logo">
+                    <img src="assets/laForgeLaureLetenneurFormation.avif" alt="La Forge, Laure Letenneur Formation" width="220" height="96" loading="lazy" decoding="async">
+                  </span>
+                  <span class="network-card__content">
+                    <span class="network-card__role">Organisme de formation</span>
+                    <span class="network-card__name">La Forge, Laure Letenneur Formation</span>
+                    <span class="network-card__desc">Partenaire formation pour concevoir des expériences d'apprentissage claires, utiles et engageantes.</span>
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <button class="testimonial-arrow networks__arrow networks__arrow--next" type="button" id="trustedNext" aria-label="Référence suivante" aria-controls="trustedTrack">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <div class="testimonial-dots networks__dots" id="trustedDots" role="group" aria-label="Navigation des références">
+          <button class="dot active" type="button" data-index="0" aria-label="Afficher BUILDERS école d'ingénieurs" aria-pressed="true"></button>
+          <button class="dot" type="button" data-index="1" aria-label="Afficher E2C Normandie" aria-pressed="false"></button>
+          <button class="dot" type="button" data-index="2" aria-label="Afficher La Forge, Laure Letenneur Formation" aria-pressed="false"></button>
+        </div>
+        <button class="testimonial-toggle networks__toggle" id="trustedToggle" type="button" aria-pressed="false">
+          Lancer le défilement des références
+        </button>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ 09 - FAQ ════════ -->
     <section class="faq" id="faq" aria-labelledby="faq-title">
       <div class="container faq__inner">
         <p class="section-label">FAQ</p>

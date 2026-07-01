@@ -958,6 +958,7 @@ figcaption span {
 
 .networks__inner {
   position: relative;
+  text-align: center;
 }
 
 .networks__header {
@@ -1004,7 +1005,8 @@ figcaption span {
   transform: translateY(0);
 }
 
-.network-card a {
+.network-card a,
+.network-card__static {
   width: min(520px, 100%);
   min-height: 320px;
   margin: 0 auto;
@@ -1024,6 +1026,10 @@ figcaption span {
   background: var(--white);
   border-color: var(--orange-deep);
   box-shadow: 0 14px 28px rgba(13, 27, 140, .1);
+}
+
+.network-card__static {
+  cursor: default;
 }
 
 .network-card__logo {
@@ -1050,6 +1056,7 @@ figcaption span {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  text-align: left;
 }
 
 .network-card__role {
@@ -1074,6 +1081,16 @@ figcaption span {
 
 .networks__dots {
   margin-top: 22px;
+}
+
+.networks__toggle {
+  width: fit-content;
+  margin: 10px auto 0;
+}
+
+.trusted {
+  background: var(--orange-light);
+  border-top: 0;
 }
 
 /* ═══════════════════════════════════════════ 08 FAQ ════════ */

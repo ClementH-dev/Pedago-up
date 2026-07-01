@@ -14,9 +14,9 @@ Mesure locale actuelle :
 
 | Mesure | Valeur |
 |---|---:|
-| Taille totale du workspace audité | 224 879 octets |
-| Taille du dossier `assets/` | 129 655 octets |
-| Ressources first-party réellement appelées par la page | 209 323 octets |
+| Taille totale du workspace audité | 262 802 octets |
+| Taille du dossier `assets/` | 157 740 octets |
+| Ressources first-party réellement appelées par la page | 247 246 octets |
 | PDF RGESN dans `assets/` | Absent |
 | PNG sources non utilisés par `index.html` | 0 octet |
 
@@ -45,7 +45,8 @@ Conclusion : la page appelée par l'utilisateur est légère. Le PDF du référe
 | Bulles de la section "Notre démarche" rendues survolables et masquables avec la touche `Escape`. | RGAA 4.1.2 - critère 10.13 | `css/style.css`, `js/app.js` |
 | Remplacement des textes lorem ipsum des bulles par un contenu métier court, lié aux étapes de collaboration. | Qualité éditoriale, RGAA 9.1 | `index.html` |
 | Remplacement de l'illustration de première section par `illustrationFormation.avif` et suppression de l'ancienne image hero inutilisée ainsi que du PNG source après conversion. | RGESN 5.1, 5.2, 6.5 | `index.html`, `assets/` |
-| Ajout d'une section "Réseaux" en défilement manuel, sans autoplay, avec logos locaux convertis en AVIF et sources PNG/JPG supprimées. | RGESN 4.1, 5.1, 5.2, 6.5 ; RGAA navigation clavier | `index.html`, `css/style.css`, `js/app.js`, `assets/` |
+| Ajout d'une section "Réseaux" en défilement manuel avec activation explicite du défilement automatique, logos locaux en AVIF et sources PNG/JPG supprimées. | RGESN 4.1, 5.1, 5.2, 6.5 ; RGAA navigation clavier | `index.html`, `css/style.css`, `js/app.js`, `assets/` |
+| Ajout d'une section "Ils me font confiance" sur le même modèle, avec logos BUILDERS, E2C Normandie et La Forge convertis en AVIF, puis suppression des PNG sources. | RGESN 4.1, 5.1, 5.2, 6.5 ; RGAA navigation clavier | `index.html`, `css/style.css`, `js/app.js`, `assets/` |
 
 ## Tâches prioritaires
 
