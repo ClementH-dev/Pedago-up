@@ -1088,6 +1088,73 @@ figcaption span {
   margin: 10px auto 0;
 }
 
+.networks--banner {
+  padding: 60px 0;
+}
+
+.networks--banner .networks__header {
+  margin-bottom: 20px;
+}
+
+.networks--banner .networks__carousel {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0 clamp(16px, 4vw, 56px);
+}
+
+.networks--banner .networks__viewport {
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  padding: 4px 0 8px;
+}
+
+.networks--banner .networks__list {
+  position: static;
+  display: flex;
+  gap: 18px;
+}
+
+.networks--banner .network-card,
+.networks--banner .network-card.active {
+  position: relative;
+  inset: auto;
+  flex: 0 0 min(420px, calc(100vw - 128px));
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  transition: none;
+  scroll-snap-align: center;
+}
+
+.networks--banner .network-card a {
+  width: 100%;
+  min-height: 220px;
+  gap: 14px;
+  padding: 18px;
+}
+
+.networks--banner .network-card__logo {
+  height: 74px;
+  padding: 10px;
+}
+
+.networks--banner .network-card__logo img {
+  max-height: 52px;
+}
+
+.networks--banner .network-card__name {
+  font-size: 1.08rem;
+}
+
+.networks--banner .network-card__desc {
+  font-size: .88rem;
+}
+
 .trusted {
   background: var(--grey-light);
   border-top: 0;
