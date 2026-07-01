@@ -22,8 +22,8 @@
   --white: #FFFFFF;
   --border: #E5E7EB;
   --radius: 8px;
-  --font-head: 'Baloo 2', sans-serif;
-  --font-body: 'Nunito Sans', sans-serif;
+  --font-head: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 /* ── Base reset ───────────────────────────────────────────── */
@@ -834,6 +834,7 @@ figcaption span {
   visibility: hidden;
   pointer-events: none;
   transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+  z-index: 4;
 }
 
 .roadmap__popover::after {
@@ -871,11 +872,12 @@ figcaption span {
   transform: translateX(-50%) rotate(45deg);
 }
 
-.roadmap__step:hover .roadmap__popover,
-.roadmap__step:focus-visible .roadmap__popover,
-.roadmap__step:focus-within .roadmap__popover {
+.roadmap__step:not(.is-popover-dismissed):hover .roadmap__popover,
+.roadmap__step:not(.is-popover-dismissed):focus-visible .roadmap__popover,
+.roadmap__step:not(.is-popover-dismissed):focus-within .roadmap__popover {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translate(-50%, 0);
 }
 
@@ -1349,9 +1351,9 @@ figcaption span {
     transform: translateX(-50%) rotate(45deg);
   }
 
-  .roadmap__step:hover .roadmap__popover,
-  .roadmap__step:focus-visible .roadmap__popover,
-  .roadmap__step:focus-within .roadmap__popover {
+  .roadmap__step:not(.is-popover-dismissed):hover .roadmap__popover,
+  .roadmap__step:not(.is-popover-dismissed):focus-visible .roadmap__popover,
+  .roadmap__step:not(.is-popover-dismissed):focus-within .roadmap__popover {
     transform: translate(-16px, 0);
   }
 

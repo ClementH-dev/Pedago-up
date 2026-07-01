@@ -203,7 +203,7 @@ document.addEventListener('focusin', event => {
 
 let current = 0;
 let autoTimer;
-let isManualPaused = false;
+let isManualPaused = true;
 let isInteractionPaused = false;
 let sliderResizeTimeout;
 let sliderTransitionTimeout;
@@ -241,7 +241,7 @@ function updatePauseButton() {
   toggle.disabled = false;
   if (isManualPaused) {
     toggle.setAttribute('aria-pressed', 'true');
-    toggle.textContent = 'Relancer les témoignages';
+    toggle.textContent = 'Lancer le défilement des témoignages';
     return;
   }
 
@@ -333,6 +333,30 @@ document.querySelector('.testimonials')?.addEventListener('focusout', event => {
     updatePauseButton();
     startAuto();
   }
+});
+
+document.querySelectorAll('.roadmap__step').forEach(step => {
+  step.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    step.classList.add('is-popover-dismissed');
+  });
+
+  step.addEventListener('focusout', event => {
+    if (!step.contains(event.relatedTarget)) {
+      step.classList.remove('is-popover-dismissed');
+    }
+  });
+
+  step.addEventListener('mouseenter', () => {
+    step.classList.remove('is-popover-dismissed');
+  });
+
+  step.addEventListener('mouseleave', () => {
+    step.classList.remove('is-popover-dismissed');
+  });
 });
 
 reducedMotion.addEventListener('change', () => {
