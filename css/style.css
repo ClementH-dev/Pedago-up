@@ -785,8 +785,8 @@ figcaption span {
 
 .roadmap__track {
   position: relative;
-  height: 400px;
-  max-width: 960px;
+  height: 440px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -857,13 +857,15 @@ figcaption span {
 }
 
 .roadmap__step:nth-child(1) .roadmap__popover,
-.roadmap__step:nth-child(3) .roadmap__popover {
+.roadmap__step:nth-child(3) .roadmap__popover,
+.roadmap__step:nth-child(5) .roadmap__popover {
   bottom: calc(100% + 16px);
   transform: translate(-50%, 10px);
 }
 
 .roadmap__step:nth-child(1) .roadmap__popover::after,
-.roadmap__step:nth-child(3) .roadmap__popover::after {
+.roadmap__step:nth-child(3) .roadmap__popover::after,
+.roadmap__step:nth-child(5) .roadmap__popover::after {
   bottom: -7px;
   transform: translateX(-50%) rotate(225deg);
 }
@@ -1179,6 +1181,10 @@ figcaption span {
   font-size: .93rem;
 }
 
+.faq__answer p + p {
+  margin-top: 8px;
+}
+
 /* ══════════════════════════════════════ 08 CONTACT ══════════ */
 .contact {
   padding: 88px 0;
@@ -1473,7 +1479,8 @@ figcaption span {
   .roadmap__step:nth-child(1) .roadmap__popover,
   .roadmap__step:nth-child(2) .roadmap__popover,
   .roadmap__step:nth-child(3) .roadmap__popover,
-  .roadmap__step:nth-child(4) .roadmap__popover {
+  .roadmap__step:nth-child(4) .roadmap__popover,
+  .roadmap__step:nth-child(5) .roadmap__popover {
     top: calc(100% + 12px);
     bottom: auto;
     transform: translate(-16px, -10px);
@@ -1482,7 +1489,8 @@ figcaption span {
   .roadmap__step:nth-child(1) .roadmap__popover::after,
   .roadmap__step:nth-child(2) .roadmap__popover::after,
   .roadmap__step:nth-child(3) .roadmap__popover::after,
-  .roadmap__step:nth-child(4) .roadmap__popover::after {
+  .roadmap__step:nth-child(4) .roadmap__popover::after,
+  .roadmap__step:nth-child(5) .roadmap__popover::after {
     top: -7px;
     bottom: auto;
     transform: translateX(-50%) rotate(45deg);
