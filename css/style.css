@@ -951,7 +951,7 @@ figcaption span {
 /* ═══════════════════════════════════════ 07 NETWORKS ═══════ */
 .networks {
   padding: 76px 0;
-  background: var(--grey-light);
+  background: var(--white);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -1089,7 +1089,7 @@ figcaption span {
 }
 
 .trusted {
-  background: var(--orange-light);
+  background: var(--grey-light);
   border-top: 0;
 }
 
