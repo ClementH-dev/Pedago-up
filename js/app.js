@@ -107,6 +107,27 @@ function focusAnchorTarget(target) {
   target.focus({ preventScroll: true });
 }
 
+function getFocusableContentElements(container) {
+  return Array.from(container.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  )).filter(element => element instanceof HTMLElement && element.offsetParent !== null);
+}
+
+function focusFirstContentControlOnNextTab(container) {
+  const handleContentKeydown = event => {
+    if (event.key !== 'Tab' || event.shiftKey) return;
+
+    const firstFocusable = getFocusableContentElements(container)[0];
+    if (!firstFocusable) return;
+
+    event.preventDefault();
+    firstFocusable.focus();
+    container.removeEventListener('keydown', handleContentKeydown);
+  };
+
+  container.addEventListener('keydown', handleContentKeydown);
+}
+
 document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(link => {
   link.addEventListener('click', event => {
     const targetId = decodeURIComponent(link.hash.slice(1));
@@ -117,6 +138,9 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(link => {
     event.preventDefault();
     closeMenu();
     focusAnchorTarget(target);
+    if (link.classList.contains('skip-link') && target instanceof HTMLElement) {
+      focusFirstContentControlOnNextTab(target);
+    }
 
     const top = targetId === 'top'
       ? 0
@@ -214,9 +238,15 @@ function updatePauseButton() {
   }
 
   toggle.disabled = false;
-  toggle.setAttribute('aria-pressed', String(isManualPaused));
-  toggle.textContent = isManualPaused
-    ? 'Relancer les témoignages'
+  if (isManualPaused) {
+    toggle.setAttribute('aria-pressed', 'true');
+    toggle.textContent = 'Relancer les témoignages';
+    return;
+  }
+
+  toggle.setAttribute('aria-pressed', 'false');
+  toggle.textContent = isInteractionPaused
+    ? 'Défilement suspendu pendant la navigation clavier'
     : 'Mettre en pause les témoignages';
 }
 
@@ -290,24 +320,16 @@ toggle?.addEventListener('click', () => {
   }
 });
 
-document.querySelector('.testimonials')?.addEventListener('mouseenter', () => {
-  isInteractionPaused = true;
-  stopAuto();
-});
-
-document.querySelector('.testimonials')?.addEventListener('mouseleave', () => {
-  isInteractionPaused = false;
-  startAuto();
-});
-
 document.querySelector('.testimonials')?.addEventListener('focusin', () => {
   isInteractionPaused = true;
   stopAuto();
+  updatePauseButton();
 });
 
 document.querySelector('.testimonials')?.addEventListener('focusout', event => {
   if (!event.currentTarget.contains(event.relatedTarget)) {
     isInteractionPaused = false;
+    updatePauseButton();
     startAuto();
   }
 });
