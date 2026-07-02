@@ -1416,15 +1416,13 @@ figcaption span {
 
 .footer__nav,
 .footer__social,
-.footer__quality,
-.footer__devs {
+.footer__quality {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.footer__quality p,
-.footer__devs p {
+.footer__quality p {
   font-size: .85rem;
   line-height: 1.6;
   color: #FFFFFF;
@@ -1432,31 +1430,6 @@ figcaption span {
 
 .footer__brand .footer__quality {
   margin-top: 18px;
-}
-
-.footer__devs .footer__nav-title {
-  font-size: .62rem;
-  letter-spacing: .1em;
-}
-
-.footer__devs ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer__devs a {
-  color: #FFFFFF;
-  font-size: .85rem;
-  text-decoration: underline;
-  text-decoration-color: var(--orange);
-  text-underline-offset: 4px;
-  transition: color .18s, text-decoration-color .18s;
-}
-
-.footer__devs a:hover {
-  color: #FFFFFF;
 }
 
 .footer__nav-title {
@@ -1581,6 +1554,7 @@ figcaption span {
 .legal-list {
   display: grid;
   gap: 16px;
+  margin-top: 18px;
 }
 
 .legal-list div {
@@ -1602,6 +1576,11 @@ figcaption span {
 
 .legal-list dd {
   color: var(--text);
+}
+
+.legal-inline-list {
+  display: grid;
+  gap: 6px;
 }
 
 /* ══════════════════════════════════════ RESPONSIVE ══════════ */
