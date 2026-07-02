@@ -1,597 +1,619 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pédago'Up - Ingénierie pédagogique et e-learning</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pédago'Up - Ingénierie pédagogique et e-learning</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
 
-  <!-- ── Lien d'évitement (RGAA) ──────────────────────────── -->
-  <a href="#presentation" class="skip-link">Aller à la section À propos</a>
+		<!-- ── Lien d'évitement (RGAA) ──────────────────────────── -->
+		<a href="#presentation" class="skip-link">Aller à la section À propos</a>
 
-  <!-- ═══════════════════════════════════════ 01 - NAVBAR ═══ -->
-  <header class="navbar" id="top">
-    <div class="navbar__inner container">
-      <a href="#top" class="navbar__logo" aria-label="Pédago'Up - Retour en haut de page">
-        <img src="assets/logo_trim.avif" alt="Pédago'Up" class="logo-img" width="420" height="305">
-      </a>
-      <nav class="navbar__nav" id="nav-menu" aria-label="Navigation principale">
-        <ul>
-          <li><a href="#presentation">À propos</a></li>
-          <li><a href="#solutions">Nos services</a></li>
-          <li><a href="#testimonials">Témoignages</a></li>
-          <li><a href="#roadmap">Notre démarche</a></li>
-          <li><a href="#faq">Foire aux questions</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="btn btn--dark navbar__cta">Prendre RDV</a>
-      <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="nav-menu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-    </div>
-  </header>
+		<!-- ═══════════════════════════════════════ 01 - NAVBAR ═══ -->
+		<header class="navbar" id="top">
+			<div class="navbar__inner container">
+				<a href="#top" class="navbar__logo" aria-label="Pédago'Up - Retour en haut de page">
+					<img src="assets/logo_trim.avif" alt="Pédago'Up" class="logo-img" width="420" height="305">
+				</a>
+				<nav class="navbar__nav" id="nav-menu" aria-label="Navigation principale">
+					<ul>
+						<li><a href="#presentation">À propos</a></li>
+						<li><a href="#solutions">Nos services</a></li>
+						<li><a href="#testimonials">Témoignages</a></li>
+						<li><a href="#roadmap">Notre démarche</a></li>
+						<li><a href="#faq">Foire aux questions</a></li>
+					</ul>
+				</nav>
+				<a href="#contact" class="btn btn--dark navbar__cta">Prendre RDV</a>
+				<button class="navbar__burger" id="burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="nav-menu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+			</div>
+		</header>
 
-  <!-- ═══════════════════════════════════ CONTENU PRINCIPAL ══ -->
-  <main id="contenu-principal" tabindex="-1">
+		<!-- ═══════════════════════════════════ CONTENU PRINCIPAL ══ -->
+		<main
+			id="contenu-principal" tabindex="-1">
 
-    <!-- ════════════════════════════════════ 02 - HERO ════════ -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <h1 class="hero__title" id="hero-title">
-            L'innovation pédagogique
-            <span class="accent">au cœur de formations engageantes</span>
-          </h1>
-          <p class="hero__sub">Conseil et expertise aux Organismes de formation et aux PME. Accompagnement 100&nbsp;% sur-mesure, adapté à vos enjeux.</p>
-          <div class="hero__ctas">
-            <a href="#solutions" class="btn btn--outline">Découvrir nos services</a>
-          </div>
-        </div>
-        <div class="hero__visual">
-          <div class="hero-portrait">
-            <img
-              src="assets/illustrationFormation.avif"
-              alt=""
-              width="400"
-              height="400">
-          </div>
-        </div>
-      </div>
-    </section>
+			<!-- ════════════════════════════════════ 02 - HERO ════════ -->
+			<section class="hero" aria-labelledby="hero-title">
+				<div class="container hero__inner">
+					<div class="hero__content">
+						<h1 class="hero__title" id="hero-title">
+							L'innovation pédagogique
+							<span class="accent">au cœur de formations engageantes</span>
+						</h1>
+						<p class="hero__sub">Conseil et expertise aux Organismes de formation et aux PME. Accompagnement 100&nbsp;% sur-mesure, adapté à vos enjeux.</p>
+						<div class="hero__ctas">
+							<a href="#solutions" class="btn btn--outline">Découvrir nos services</a>
+						</div>
+					</div>
+					<div class="hero__visual">
+						<div class="hero-portrait">
+							<img src="assets/illustrationFormation.avif" alt="" width="400" height="400">
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <!-- ══════════════════════════════════ 03 - PRÉSENTATION ══ -->
-    <section class="presentation" id="presentation" aria-labelledby="presentation-title">
-      <div class="container presentation__inner">
-        <div class="presentation__photo">
-          <div class="photo-frame">
-            <img
-              src="assets/1763549697758.avif"
-              alt="Portrait illustré de Carla Delépée, ingénieure pédagogique et fondatrice de Pédago'Up"
-              width="400"
-              height="400">
-          </div>
-        </div>
-        <div class="presentation__text">
-          <p class="section-label">À propos</p>
-          <h2 id="presentation-title">Vos formations méritent d'être aussi rigoureuses que créatives</h2>
-          <p>Après un parcours scientifique qui m'a apporté rigueur et méthode, je me suis passionnée pour la pédagogie. J'ai exercé différentes fonctions&nbsp;: formatrice, chargée de projets pédagogiques nationaux et européens ainsi qu'ingénieure pédagogique.</p>
-          <p>À travers mon entreprise <strong>Pédago'Up</strong>, je mets mon expertise au service de vos projets de formations et de nos collaborations pédagogiques.</p>
-          <a href="#contact" class="btn btn--outline">Me contacter pour en discuter</a>
-        </div>
-      </div>
-    </section>
+			<!-- ══════════════════════════════════ 03 - PRÉSENTATION ══ -->
+			<section class="presentation" id="presentation" aria-labelledby="presentation-title">
+				<div class="container presentation__inner">
+					<div class="presentation__photo">
+						<div class="photo-frame">
+							<img src="assets/1763549697758.avif" alt="Portrait illustré de Carla Delépée, ingénieure pédagogique et fondatrice de Pédago'Up" width="400" height="400">
+						</div>
+					</div>
+					<div class="presentation__text">
+						<p class="section-label">À propos</p>
+						<h2 id="presentation-title">Vos formations méritent d'être aussi rigoureuses que créatives</h2>
+						<p>Après un parcours scientifique qui m'a apporté rigueur et méthode, je me suis passionnée pour la pédagogie. J'ai exercé différentes fonctions&nbsp;: formatrice, chargée de projets pédagogiques nationaux et européens ainsi qu'ingénieure pédagogique.</p>
+						<p>À travers mon entreprise
+							<strong>Pédago'Up</strong>, je mets mon expertise au service de vos projets de formations et de nos collaborations pédagogiques.</p>
+						<a href="#contact" class="btn btn--outline">Me contacter pour en discuter</a>
+					</div>
+				</div>
+			</section>
 
-    <!-- ════════════════════════════════════ 04 - SOLUTIONS ══ -->
-    <section class="solutions" id="solutions" aria-labelledby="solutions-title">
-      <div class="container">
-        <p class="section-label section-label--center">Nos services</p>
-        <h2 class="section-title" id="solutions-title">Quatre leviers pour transformer vos formations</h2>
-        <ul class="solutions__grid">
+			<!-- ════════════════════════════════════ 04 - SOLUTIONS ══ -->
+			<section class="solutions" id="solutions" aria-labelledby="solutions-title">
+				<div class="container">
+					<p class="section-label section-label--center">Nos services</p>
+					<h2 class="section-title" id="solutions-title">Quatre leviers pour transformer vos formations</h2>
+					<ul class="solutions__grid">
 
-          <li class="solution-card" tabindex="0" aria-labelledby="service-formations-title">
-            <div class="solution-card__icon solution-card__icon--image">
-              <img src="assets/formationsEngageantes.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
-            </div>
-            <h3 id="service-formations-title">Formations engageantes</h3>
-            <p class="solution-card__tagline">Redonnez à vos apprenants le plaisir de se former&nbsp;!</p>
-            <ul>
-              <li>Scénarios pédagogiques</li>
-              <li>Pédagogie active</li>
-              <li>Évaluation des formations</li>
-              <li>Ressources interactives</li>
-            </ul>
-          </li>
+						<li class="solution-card" tabindex="0" aria-labelledby="service-formations-title">
+							<div class="solution-card__icon solution-card__icon--image">
+								<img src="assets/formationsEngageantes.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
+							</div>
+							<h3 id="service-formations-title">Formations engageantes</h3>
+							<p class="solution-card__tagline">Redonnez à vos apprenants le plaisir de se former&nbsp;!</p>
+							<ul>
+								<li>Scénarios pédagogiques</li>
+								<li>Pédagogie active</li>
+								<li>Ressources interactives</li>
+								<li>Évaluation des formations</li>
+							</ul>
+						</li>
 
-          <li class="solution-card" tabindex="0" aria-labelledby="service-competences-title">
-            <div class="solution-card__icon solution-card__icon--image">
-              <img src="assets/approcheParCompetences.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
-            </div>
-            <h3 id="service-competences-title">Approche par compétences</h3>
-            <p class="solution-card__tagline">Alignez vos formations sur les attentes métiers&nbsp;!</p>
-            <ul>
-              <li>Approche par compétences</li>
-              <li>Approche programme</li>
-              <li>Évaluation des compétences</li>
-            </ul>
-          </li>
+						<li class="solution-card" tabindex="0" aria-labelledby="service-competences-title">
+							<div class="solution-card__icon solution-card__icon--image">
+								<img src="assets/approcheParCompetences.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
+							</div>
+							<h3 id="service-competences-title">Approche par compétences</h3>
+							<p class="solution-card__tagline">Alignez vos formations sur les attentes métiers&nbsp;!</p>
+							<ul>
+								<li>Approche par compétences</li>
+								<li>Approche programme</li>
+								<li>Évaluation des compétences</li>
+							</ul>
+						</li>
 
-          <li class="solution-card" tabindex="0" aria-labelledby="service-accessibilite-title">
-            <div class="solution-card__icon solution-card__icon--image">
-              <img src="assets/accessibilite.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
-            </div>
-            <h3 id="service-accessibilite-title">Accessibilité</h3>
-            <p class="solution-card__tagline">Garantissez l'inclusion de tous vos apprenants&nbsp;!</p>
-            <ul>
-              <li>Accessibilité numérique</li>
-              <li>Accessibilité pédagogique</li>
-            </ul>
-          </li>
+						<li class="solution-card" tabindex="0" aria-labelledby="service-accessibilite-title">
+							<div class="solution-card__icon solution-card__icon--image">
+								<img src="assets/accessibilite.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
+							</div>
+							<h3 id="service-accessibilite-title">Accessibilité</h3>
+							<p class="solution-card__tagline">Garantissez l'inclusion de tous vos apprenants&nbsp;!</p>
+							<ul>
+								<li>Accessibilité numérique</li>
+								<li>Accessibilité pédagogique</li>
+							</ul>
+						</li>
 
-          <li class="solution-card" tabindex="0" aria-labelledby="service-valorisation-title">
-            <div class="solution-card__icon solution-card__icon--image">
-              <img src="assets/valorisationDesCompetences.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
-            </div>
-            <h3 id="service-valorisation-title">Valorisation des compétences</h3>
-            <p class="solution-card__tagline">Activez la valorisation de compétences et d'expériences&nbsp;!</p>
-            <ul>
-              <li>Processus de reconnaissance</li>
-              <li>Open badges</li>
-            </ul>
-          </li>
+						<li class="solution-card" tabindex="0" aria-labelledby="service-valorisation-title">
+							<div class="solution-card__icon solution-card__icon--image">
+								<img src="assets/valorisationDesCompetences.avif" alt="" aria-hidden="true" width="480" height="320" loading="lazy" decoding="async">
+							</div>
+							<h3 id="service-valorisation-title">Valorisation des compétences</h3>
+							<p class="solution-card__tagline">Activez la valorisation de compétences et d'expériences&nbsp;!</p>
+							<ul>
+								<li>Processus de reconnaissance</li>
+								<li>Open badges</li>
+							</ul>
+						</li>
 
-        </ul>
-        <p class="section-sub solutions__sub">Un accompagnement sur-mesure pour chaque enjeu pédagogique</p>
-      </div>
-    </section>
+					</ul>
+					<p class="section-sub solutions__sub">Un accompagnement sur-mesure pour chaque enjeu pédagogique</p>
+				</div>
+			</section>
 
-    <!-- ════════════════════════════════════ 05 - TÉMOIGNAGES ═ -->
-    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <h2 class="sr-only" id="testimonials-title">Témoignages clients</h2>
-        <div class="testimonial-nav">
-          <button class="testimonial-arrow testimonial-arrow--prev" id="testimonialPrev" type="button" aria-label="Témoignage précédent">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="testimonial-slider" id="testimonialSlider" aria-live="off" aria-atomic="true">
+			<!-- ════════════════════════════════════ 05 - TÉMOIGNAGES ═ -->
+			<section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+				<div class="container">
+					<h2 class="sr-only" id="testimonials-title">Témoignages clients</h2>
+					<div class="testimonial-nav">
+						<button class="testimonial-arrow testimonial-arrow--prev" id="testimonialPrev" type="button" aria-label="Témoignage précédent">
+							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+						<div class="testimonial-slider" id="testimonialSlider" aria-live="off" aria-atomic="true">
 
-          <figure class="testimonial-slide active">
-            <blockquote>
-              <p><span class="testimonial__quote-mark--open" aria-hidden="true">"</span>Carla Delépée propose un travail de qualité avec la ferme intention de répondre à nos besoins. Elle s’adapte et s’assure d’avoir compris la commande. Elle est organisée, a une très bonne capacité rédactionnelle et un talent en ingénierie pédagogique et andragogique.<span class="testimonial__quote-mark--close" aria-hidden="true">"</span></p>
-            </blockquote>
-            <figcaption>
-              <div>
-                <cite>Alexandra Bleux</cite>
-                <span>Directrice de l’E2C Normandie</span>
-              </div>
-            </figcaption>
-          </figure>
+							<figure class="testimonial-slide active">
+								<blockquote>
+									<p>
+										<span class="testimonial__quote-mark--open" aria-hidden="true">"</span>Carla Delépée propose un travail de qualité avec la ferme intention de répondre à nos besoins. Elle s’adapte et s’assure d’avoir compris la commande. Elle est organisée, a une très bonne capacité rédactionnelle et un talent en ingénierie pédagogique et andragogique.<span class="testimonial__quote-mark--close" aria-hidden="true">"</span>
+									</p>
+								</blockquote>
+								<figcaption>
+									<div>
+										<cite>Alexandra Bleux</cite>
+										<span>Directrice de l’E2C Normandie</span>
+									</div>
+								</figcaption>
+							</figure>
 
-          <figure class="testimonial-slide" aria-hidden="true">
-            <blockquote>
-              <p><span class="testimonial__quote-mark--open" aria-hidden="true">"</span>Carla Delépée a accompagné l’équipe pédagogique dans l’organisation de deux événements IDDI25 et CAP’25. Elle a aussi pris en charge la valorisation par Open Badges : définition des compétences visées, création des badges et formation des utilisateurs. Je recommande vivement Carla pour son professionnalisme, son sérieux et son efficacité. J’ai pu observer son excellence académique, sa faculté d’adaptation, ainsi que sa capacité remarquable à résoudre des problèmes complexes. <span class="testimonial__quote-mark--close" aria-hidden="true">"</span></p>
-            </blockquote>
-            <figcaption>
-              <div>
-                <cite>Marie Bagieu</cite>
-                <span>Directrice de l’Innovation Pédagogique à BUILDERS école d’ingénieurs</span>
-              </div>
-            </figcaption>
-          </figure>
+							<figure class="testimonial-slide" aria-hidden="true">
+								<blockquote>
+									<p>
+										<span class="testimonial__quote-mark--open" aria-hidden="true">"</span>Carla Delépée a accompagné l’équipe pédagogique dans l’organisation de deux événements IDDI25 et CAP’25. Elle a aussi pris en charge la valorisation par Open Badges : définition des compétences visées, création des badges et formation des utilisateurs. Je recommande vivement Carla pour son professionnalisme, son sérieux et son efficacité. J’ai pu observer son excellence académique, sa faculté d’adaptation, ainsi que sa capacité remarquable à résoudre des problèmes complexes.
+										<span class="testimonial__quote-mark--close" aria-hidden="true">"</span>
+									</p>
+								</blockquote>
+								<figcaption>
+									<div>
+										<cite>Marie Bagieu</cite>
+										<span>Directrice de l’Innovation Pédagogique à BUILDERS école d’ingénieurs</span>
+									</div>
+								</figcaption>
+							</figure>
 
-          <figure class="testimonial-slide" aria-hidden="true">
-            <blockquote>
-              <p><span class="testimonial__quote-mark--open" aria-hidden="true">"</span>Un accompagnement sur-mesure qui a réellement aligné nos formations sur les attentes terrain. La démarche par compétences a tout changé. <span class="testimonial__quote-mark--close" aria-hidden="true">"</span></p>
-            </blockquote>
-            <figcaption>
-              <div>
-                <cite>Jean-Pierre Martin</cite>
-                <span>Directeur pédagogique, Centre de formation</span>
-              </div>
-            </figcaption>
-          </figure>
+							<figure class="testimonial-slide" aria-hidden="true">
+								<blockquote>
+									<p>
+										<span class="testimonial__quote-mark--open" aria-hidden="true">"</span>J’ai fait appel à Pédago’Up pour m’aider à structurer mes contenus. Grâce à l’accompagnement professionnel et bienveillant de Carla, j’aborde mes prochaines sessions de formation ainsi que mon audit Qualiopi avec beaucoup plus de sérénité.
+										<span class="testimonial__quote-mark--close" aria-hidden="true">"</span>
+									</p>
+								</blockquote>
+								<figcaption>
+									<div>
+										<cite>Laure Letenneur</cite>
+										<span>Fondatrice et Directrice de La Forge Formation</span>
+									</div>
+								</figcaption>
+							</figure>
 
-        </div>
-          <button class="testimonial-arrow testimonial-arrow--next" id="testimonialNext" type="button" aria-label="Témoignage suivant">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-        <div class="testimonial-dots" id="testimonialDots" role="group" aria-label="Navigation des témoignages">
-          <button class="dot active" data-index="0" aria-label="Afficher le témoignage 1 sur 3" aria-pressed="true"></button>
-          <button class="dot" data-index="1" aria-label="Afficher le témoignage 2 sur 3" aria-pressed="false"></button>
-          <button class="dot" data-index="2" aria-label="Afficher le témoignage 3 sur 3" aria-pressed="false"></button>
-        </div>
-        <button class="testimonial-toggle" id="testimonialToggle" type="button" aria-pressed="false">
-          Mettre en pause les témoignages
-        </button>
-      </div>
-    </section>
+						</div>
+						<button class="testimonial-arrow testimonial-arrow--next" id="testimonialNext" type="button" aria-label="Témoignage suivant">
+							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+					</div>
+					<div class="testimonial-dots" id="testimonialDots" role="group" aria-label="Navigation des témoignages">
+						<button class="dot active" data-index="0" aria-label="Afficher le témoignage 1 sur 3" aria-pressed="true"></button>
+						<button class="dot" data-index="1" aria-label="Afficher le témoignage 2 sur 3" aria-pressed="false"></button>
+						<button class="dot" data-index="2" aria-label="Afficher le témoignage 3 sur 3" aria-pressed="false"></button>
+					</div>
+					<button class="testimonial-toggle" id="testimonialToggle" type="button" aria-pressed="false">
+						Mettre en pause les témoignages
+					</button>
+				</div>
+			</section>
 
-    <!-- ════════════════════════════════════ 06 - ROADMAP ══════ -->
-    <section class="roadmap" id="roadmap" aria-labelledby="roadmap-title">
-      <div class="container">
-        <p class="section-label section-label--center">Notre démarche</p>
-        <h2 class="section-title" id="roadmap-title" tabindex="0">Accompagnement 100&nbsp;% sur-mesure adapté à votre contexte</h2>
+			<!-- ════════════════════════════════════ 06 - ROADMAP ══════ -->
+			<section class="roadmap" id="roadmap" aria-labelledby="roadmap-title">
+				<div class="container">
+					<p class="section-label section-label--center">Notre démarche</p>
+					<h2 class="section-title" id="roadmap-title" tabindex="0">Accompagnement 100&nbsp;% sur-mesure adapté à votre contexte</h2>
 
-        <div class="roadmap__track">
-          <svg class="roadmap__wave" viewBox="0 0 1120 440" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M 95 272 C 190 272 220 113 330 113 C 440 113 455 219 566 219 C 680 219 690 100 801 100 C 915 100 925 272 1030 272"
-                  stroke="#F57C1F" stroke-width="3.5" fill="none"
-                  stroke-dasharray="9 6" stroke-linecap="round"/>
-          </svg>
+					<div class="roadmap__track">
+						<svg class="roadmap__wave" viewbox="0 0 1120 440" preserveaspectratio="none" aria-hidden="true">
+							<path d="M 95 272 C 190 272 220 113 330 113 C 440 113 455 219 566 219 C 680 219 690 100 801 100 C 915 100 925 272 1030 272" stroke="#F57C1F" stroke-width="3.5" fill="none" stroke-dasharray="9 6" stroke-linecap="round"/>
+						</svg>
 
-          <ol class="roadmap__steps" aria-label="Les 5 étapes de la démarche">
+						<ol class="roadmap__steps" aria-label="Les 5 étapes de la démarche">
 
-            <li class="roadmap__step" style="left:8.5%;top:54%" tabindex="0" aria-describedby="roadmap-popover-1">
-              <div class="step-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <circle cx="9" cy="7" r="3" stroke="#F57C1F" stroke-width="1.8"/>
-                  <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round"/>
-                  <circle cx="17" cy="8" r="2.2" stroke="#F57C1F" stroke-width="1.6"/>
-                  <path d="M20 19c0-2.8-1.4-4.5-3-5" stroke="#F57C1F" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="step-body">
-                <div class="step-num" aria-hidden="true">1</div>
-                <h3 class="step-title">Vous rencontrer</h3>
-                <p class="step-desc">Comprendre votre contexte et vos enjeux.</p>
-              </div>
-              <div class="roadmap__popover" id="roadmap-popover-1" role="tooltip">Premier échange pour poser le cadre : public concerné, contexte métier, contraintes, ressources déjà disponibles et niveau d'accompagnement attendu.</div>
-            </li>
+							<li class="roadmap__step" style="left:8.5%;top:54%" tabindex="0" aria-describedby="roadmap-popover-1">
+								<div class="step-icon" aria-hidden="true">
+									<svg viewbox="0 0 24 24" fill="none">
+										<circle cx="9" cy="7" r="3" stroke="#F57C1F" stroke-width="1.8"/>
+										<path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round"/>
+										<circle cx="17" cy="8" r="2.2" stroke="#F57C1F" stroke-width="1.6"/>
+										<path d="M20 19c0-2.8-1.4-4.5-3-5" stroke="#F57C1F" stroke-width="1.6" stroke-linecap="round"/>
+									</svg>
+								</div>
+								<div class="step-body">
+									<div class="step-num" aria-hidden="true">1</div>
+									<h3 class="step-title">Vous rencontrer</h3>
+									<p class="step-desc">Comprendre votre contexte et vos enjeux.</p>
+								</div>
+								<div class="roadmap__popover" id="roadmap-popover-1" role="tooltip">Premier échange pour poser le cadre : public concerné, contexte métier, contraintes, ressources déjà disponibles et niveau d'accompagnement attendu.</div>
+							</li>
 
-            <li class="roadmap__step" style="left:29.5%;top:18%" tabindex="0" aria-describedby="roadmap-popover-2">
-              <div class="step-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <circle cx="11" cy="11" r="7" stroke="#F57C1F" stroke-width="1.8"/>
-                  <path d="M20 20l-3.5-3.5" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="step-body">
-                <div class="step-num" aria-hidden="true">2</div>
-                <h3 class="step-title">Comprendre vos besoins</h3>
-                <p class="step-desc">Analyser vos attentes et vos objectifs.</p>
-              </div>
-              <div class="roadmap__popover" id="roadmap-popover-2" role="tooltip">Analyse structurée: compétences à développer, modalités possibles, points d'accessibilité, outils de diffusion et critères de réussite.</div>
-            </li>
+							<li class="roadmap__step" style="left:29.5%;top:18%" tabindex="0" aria-describedby="roadmap-popover-2">
+								<div class="step-icon" aria-hidden="true">
+									<svg viewbox="0 0 24 24" fill="none">
+										<circle cx="11" cy="11" r="7" stroke="#F57C1F" stroke-width="1.8"/>
+										<path d="M20 20l-3.5-3.5" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round"/>
+									</svg>
+								</div>
+								<div class="step-body">
+									<div class="step-num" aria-hidden="true">2</div>
+									<h3 class="step-title">Comprendre vos besoins</h3>
+									<p class="step-desc">Analyser vos attentes et vos objectifs.</p>
+								</div>
+								<div class="roadmap__popover" id="roadmap-popover-2" role="tooltip">Analyse structurée: compétences à développer, modalités possibles, points d'accessibilité, outils de diffusion et critères de réussite.</div>
+							</li>
 
-            <li class="roadmap__step" style="left:50.5%;top:42%" tabindex="0" aria-describedby="roadmap-popover-3">
-              <div class="step-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#F57C1F" stroke-width="1.8" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="step-body">
-                <div class="step-num" aria-hidden="true">3</div>
-                <h3 class="step-title">Échanger sur la base d'une proposition</h3>
-                <p class="step-desc">Construire ensemble la solution adaptée.</p>
-              </div>
-              <div class="roadmap__popover" id="roadmap-popover-3" role="tooltip">Restitution d'une recommandation claire : périmètre, livrables, jalons, formats pédagogiques, organisation de la production et points de décision.</div>
-            </li>
+							<li class="roadmap__step" style="left:50.5%;top:42%" tabindex="0" aria-describedby="roadmap-popover-3">
+								<div class="step-icon" aria-hidden="true">
+									<svg viewbox="0 0 24 24" fill="none">
+										<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#F57C1F" stroke-width="1.8" stroke-linejoin="round"/>
+									</svg>
+								</div>
+								<div class="step-body">
+									<div class="step-num" aria-hidden="true">3</div>
+									<h3 class="step-title">Échanger sur la base d'une proposition</h3>
+									<p class="step-desc">Construire ensemble la solution adaptée.</p>
+								</div>
+								<div class="roadmap__popover" id="roadmap-popover-3" role="tooltip">Restitution d'une recommandation claire : périmètre, livrables, jalons, formats pédagogiques, organisation de la production et points de décision.</div>
+							</li>
 
-            <li class="roadmap__step" style="left:71.5%;top:15%" tabindex="0" aria-describedby="roadmap-popover-4">
-              <div class="step-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2s5 3.5 5 9a5 5 0 0 1-10 0c0-5.5 5-9 5-9z" stroke="#F57C1F" stroke-width="1.8" stroke-linejoin="round"/>
-                  <path d="M9 13l-2.5 4.5h11L15 13" stroke="#F57C1F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="12" cy="9" r="1.5" fill="#F57C1F"/>
-                </svg>
-              </div>
-              <div class="step-body">
-                <div class="step-num" aria-hidden="true">4</div>
-                <h3 class="step-title">Début de l'accompagnement</h3>
-                <p class="step-desc">Lancer votre projet et vous accompagner dans sa réussite.</p>
-              </div>
-              <div class="roadmap__popover" id="roadmap-popover-4" role="tooltip">Conception des supports, coordination avec vos experts, ajustements terrain et transfert aux équipes.</div>
-            </li>
+							<li class="roadmap__step" style="left:71.5%;top:15%" tabindex="0" aria-describedby="roadmap-popover-4">
+								<div class="step-icon" aria-hidden="true">
+									<svg viewbox="0 0 24 24" fill="none">
+										<path d="M12 2s5 3.5 5 9a5 5 0 0 1-10 0c0-5.5 5-9 5-9z" stroke="#F57C1F" stroke-width="1.8" stroke-linejoin="round"/>
+										<path d="M9 13l-2.5 4.5h11L15 13" stroke="#F57C1F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+										<circle cx="12" cy="9" r="1.5" fill="#F57C1F"/>
+									</svg>
+								</div>
+								<div class="step-body">
+									<div class="step-num" aria-hidden="true">4</div>
+									<h3 class="step-title">Début de l'accompagnement</h3>
+									<p class="step-desc">Lancer votre projet et vous accompagner dans sa réussite.</p>
+								</div>
+								<div class="roadmap__popover" id="roadmap-popover-4" role="tooltip">Conception des supports, coordination avec vos experts, ajustements terrain et transfert aux équipes.</div>
+							</li>
 
-            <li class="roadmap__step" style="left:92%;top:54%" tabindex="0" aria-describedby="roadmap-popover-5">
-              <div class="step-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M4 13.5l4.5 4.5L20 6.5" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M5 5h10a2 2 0 0 1 2 2v3" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M5 5v11a2 2 0 0 0 2 2h4" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="step-body">
-                <div class="step-num" aria-hidden="true">5</div>
-                <h3 class="step-title">Mise en œuvre et suivi</h3>
-                <p class="step-desc">Implémenter votre projet et vérifier sa qualité.</p>
-              </div>
-              <div class="roadmap__popover" id="roadmap-popover-5" role="tooltip">Veille au bon déroulement, évaluation de l'efficacité du dispositif pour une amélioration continue, recueil de vos retours sur l'accompagnement.</div>
-            </li>
+							<li class="roadmap__step" style="left:92%;top:54%" tabindex="0" aria-describedby="roadmap-popover-5">
+								<div class="step-icon" aria-hidden="true">
+									<svg viewbox="0 0 24 24" fill="none">
+										<path d="M4 13.5l4.5 4.5L20 6.5" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M5 5h10a2 2 0 0 1 2 2v3" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M5 5v11a2 2 0 0 0 2 2h4" stroke="#F57C1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+								<div class="step-body">
+									<div class="step-num" aria-hidden="true">5</div>
+									<h3 class="step-title">Mise en œuvre et suivi</h3>
+									<p class="step-desc">Implémenter votre projet et vérifier sa qualité.</p>
+								</div>
+								<div class="roadmap__popover" id="roadmap-popover-5" role="tooltip">Veille au bon déroulement, évaluation de l'efficacité du dispositif pour une amélioration continue, recueil de vos retours sur l'accompagnement.</div>
+							</li>
 
-          </ol>
-        </div>
+						</ol>
+					</div>
 
-        <div class="roadmap__cta">
-          <a href="#contact" class="btn btn--primary" aria-label="Échangeons - accéder au formulaire de contact">Échangeons&nbsp;!</a>
-        </div>
-      </div>
-    </section>
+					<div class="roadmap__cta">
+						<a href="#contact" class="btn btn--primary" aria-label="Échangeons - accéder au formulaire de contact">Échangeons&nbsp;!</a>
+					</div>
+				</div>
+			</section>
 
-    <!-- ══════════════════════════════════════ 07 - RÉSEAUX ═════ -->
-    <section class="networks networks--grid" id="networks" aria-labelledby="networks-title">
-      <div class="container networks__inner">
-        <div class="networks__header">
-          <p class="section-label section-label--center">Réseaux</p>
-          <h2 class="section-title" id="networks-title">Les réseaux auxquels j'appartiens</h2>
-        </div>
+			<!-- ══════════════════════════════════════ 07 - RÉSEAUX ═════ -->
+			<section class="networks networks--grid" id="networks" aria-labelledby="networks-title">
+				<div class="container networks__inner">
+					<div class="networks__header">
+						<p class="section-label section-label--center">Réseaux</p>
+						<h2 class="section-title" id="networks-title">Les réseaux auxquels j'appartiens</h2>
+					</div>
 
-        <ul class="networks__list networks__list--grid">
-          <li class="network-card active">
-            <a href="https://normandiepionnieres.fr/" target="_blank" rel="noopener noreferrer" aria-label="Normandie Pionnières - site externe">
-              <span class="network-card__logo network-card__logo--dark">
-                <img src="assets/normandiePionnieres.avif" alt="Normandie Pionnières" width="220" height="96" loading="lazy" decoding="async">
-              </span>
-              <span class="network-card__content">
-                <span class="network-card__role">Co-animatrice des matinales à Caen</span>
-                <span class="network-card__name">Normandie Pionnières</span>
-                <span class="network-card__desc">Réseau dédié à l'entrepreneuriat féminin en Normandie.</span>
-              </span>
-            </a>
-          </li>
-          <li class="network-card active">
-            <a href="https://www.lisis.org/" target="_blank" rel="noopener noreferrer" aria-label="LISIS - site externe">
-              <span class="network-card__logo">
-                <img src="assets/lisis.avif" alt="LISIS" width="220" height="96" loading="lazy" decoding="async">
-              </span>
-              <span class="network-card__content">
-                <span class="network-card__role">Membre du comité scientifique</span>
-                <span class="network-card__name">LISIS</span>
-                <span class="network-card__desc">Laboratoire international sur l'inclusion scolaire.</span>
-              </span>
-            </a>
-          </li>
-          <li class="network-card active">
-            <a href="https://www.linkedin.com/showcase/ap%C3%A9ro-p%C3%A9dago-caen/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="Apéro Pédago Caen - page LinkedIn externe">
-              <span class="network-card__logo">
-                <img src="assets/aperoPedagoCaen.avif" alt="Apéro Pédago Caen" width="220" height="96" loading="lazy" decoding="async">
-              </span>
-              <span class="network-card__content">
-                <span class="network-card__role">Co-animatrice</span>
-                <span class="network-card__name">Apéro Pédago Caen</span>
-                <span class="network-card__desc">Rencontres locales autour des pratiques pédagogiques.</span>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+					<ul class="networks__list networks__list--grid">
+						<li class="network-card active">
+							<a href="https://normandiepionnieres.fr/" target="_blank" rel="noopener noreferrer" aria-label="Normandie Pionnières - site externe">
+								<span class="network-card__logo network-card__logo--dark">
+									<img src="assets/normandiePionnieres.avif" alt="Normandie Pionnières" width="220" height="96" loading="lazy" decoding="async">
+								</span>
+								<span class="network-card__content">
+									<span class="network-card__role">Co-animatrice des matinales à Caen</span>
+									<span class="network-card__name">Normandie Pionnières</span>
+									<span class="network-card__desc">Réseau dédié à l'entrepreneuriat féminin en Normandie.</span>
+								</span>
+							</a>
+						</li>
+						<li class="network-card active">
+							<a href="https://www.lisis.org/" target="_blank" rel="noopener noreferrer" aria-label="LISIS - site externe">
+								<span class="network-card__logo">
+									<img src="assets/lisis.avif" alt="LISIS" width="220" height="96" loading="lazy" decoding="async">
+								</span>
+								<span class="network-card__content">
+									<span class="network-card__role">Membre du comité scientifique</span>
+									<span class="network-card__name">LISIS</span>
+									<span class="network-card__desc">Laboratoire international sur l'inclusion scolaire.</span>
+								</span>
+							</a>
+						</li>
+						<li class="network-card active">
+							<a href="https://www.linkedin.com/showcase/ap%C3%A9ro-p%C3%A9dago-caen/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="Apéro Pédago Caen - page LinkedIn externe">
+								<span class="network-card__logo">
+									<img src="assets/aperoPedagoCaen.avif" alt="Apéro Pédago Caen" width="220" height="96" loading="lazy" decoding="async">
+								</span>
+								<span class="network-card__content">
+									<span class="network-card__role">Co-animatrice</span>
+									<span class="network-card__name">Apéro Pédago Caen</span>
+									<span class="network-card__desc">Rencontres locales autour des pratiques pédagogiques.</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-    <!-- ═══════════════════════════════ 08 - CONFIANCE ════════ -->
-    <section class="networks trusted" id="trusted" aria-labelledby="trusted-title">
-      <div class="container networks__inner">
-        <div class="networks__header">
-          <p class="section-label section-label--center">Ils me font confiance</p>
-          <h2 class="section-title" id="trusted-title">Des partenaires accompagnés dans leurs projets pédagogiques</h2>
-        </div>
+			<!-- ═══════════════════════════════ 08 - CONFIANCE ════════ -->
+			<section class="networks trusted" id="trusted" aria-labelledby="trusted-title">
+				<div class="container networks__inner">
+					<div class="networks__header">
+						<p class="section-label section-label--center">Ils me font confiance</p>
+						<h2 class="section-title" id="trusted-title">Des clients accompagnés dans leurs projets pédagogiques</h2>
+					</div>
 
-        <div class="networks__carousel">
-          <button class="testimonial-arrow networks__arrow networks__arrow--prev" type="button" id="trustedPrev" aria-label="Référence précédente" aria-controls="trustedTrack">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+					<div class="networks__carousel">
+						<button class="testimonial-arrow networks__arrow networks__arrow--prev" type="button" id="trustedPrev" aria-label="Référence précédente" aria-controls="trustedTrack">
+							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
 
-          <div class="networks__viewport" id="trustedTrack" aria-live="off" aria-atomic="true">
-            <ul class="networks__list">
-              <li class="network-card active">
-                <a href="https://builders-ingenieurs.fr/" target="_blank" rel="noopener noreferrer" aria-label="BUILDERS école d'ingénieurs - site externe">
-                  <span class="network-card__logo">
-                    <img src="assets/builders.avif" alt="BUILDERS école d'ingénieurs" width="220" height="96" loading="lazy" decoding="async">
-                  </span>
-                  <span class="network-card__content">
-                    <span class="network-card__role">École d'ingénieurs</span>
-                    <span class="network-card__name">BUILDERS école d'ingénieurs</span>
-                    <span class="network-card__desc">Accompagnement de projets d'innovation pédagogique et de valorisation par open badges.</span>
-                  </span>
-                </a>
-              </li>
-              <li class="network-card" aria-hidden="true">
-                <a href="https://www.e2cnormandie.fr/" target="_blank" rel="noopener noreferrer" aria-label="E2C Normandie - site externe">
-                  <span class="network-card__logo">
-                    <img src="assets/e2cNormandie.avif" alt="E2C Normandie" width="220" height="96" loading="lazy" decoding="async">
-                  </span>
-                  <span class="network-card__content">
-                    <span class="network-card__role">École de la deuxième chance</span>
-                    <span class="network-card__name">E2C Normandie</span>
-                    <span class="network-card__desc">Collaboration autour de dispositifs pédagogiques adaptés aux besoins des publics accompagnés.</span>
-                  </span>
-                </a>
-              </li>
-              <li class="network-card" aria-hidden="true">
-                <span class="network-card__static" aria-label="La Forge, Laure Letenneur Formation">
-                  <span class="network-card__logo">
-                    <img src="assets/laForgeLaureLetenneurFormation.avif" alt="La Forge, Laure Letenneur Formation" width="220" height="96" loading="lazy" decoding="async">
-                  </span>
-                  <span class="network-card__content">
-                    <span class="network-card__role">Organisme de formation</span>
-                    <span class="network-card__name">La Forge, Laure Letenneur Formation</span>
-                    <span class="network-card__desc">Partenaire formation pour concevoir des expériences d'apprentissage claires, utiles et engageantes.</span>
-                  </span>
-                </span>
-              </li>
-            </ul>
-          </div>
+						<div class="networks__viewport" id="trustedTrack" aria-live="off" aria-atomic="true">
+							<ul class="networks__list">
+								<li class="network-card active">
+									<a href="https://builders-ingenieurs.fr/" target="_blank" rel="noopener noreferrer" aria-label="BUILDERS école d'ingénieurs - site externe">
+										<span class="network-card__logo">
+											<img src="assets/builders.avif" alt="BUILDERS école d'ingénieurs" width="220" height="96" loading="lazy" decoding="async">
+										</span>
+										<span class="network-card__content">
+											<span class="network-card__role">École d'ingénieurs</span>
+											<span class="network-card__name">BUILDERS école d'ingénieurs</span>
+											<span class="network-card__desc">Accompagnement de projets d'innovation pédagogique et de valorisation par open badges, Accompagnement à la transformation de la maquette de formation Ingénieur en approche par compétences et approche programme.</span>
+										</span>
+									</a>
+								</li>
+								<li class="network-card" aria-hidden="true">
+									<a href="https://www.e2cnormandie.fr/" target="_blank" rel="noopener noreferrer" aria-label="E2C Normandie - site externe">
+										<span class="network-card__logo">
+											<img src="assets/e2cNormandie.avif" alt="E2C Normandie" width="220" height="96" loading="lazy" decoding="async">
+										</span>
+										<span class="network-card__content">
+											<span class="network-card__role">École de la deuxième chance</span>
+											<span class="network-card__name">E2C Normandie</span>
+											<span class="network-card__desc">Formation de l’équipe pédagogique à la réponse aux appels à projets.</span>
+										</span>
+									</a>
+								</li>
+								<li class="network-card" aria-hidden="true">
+									<span class="network-card__static" aria-label="La Forge, Laure Letenneur Formation">
+										<span class="network-card__logo">
+											<img src="assets/laForgeLaureLetenneurFormation.avif" alt="La Forge, Laure Letenneur Formation" width="220" height="96" loading="lazy" decoding="async">
+										</span>
+										<span class="network-card__content">
+											<span class="network-card__role">Organisme de formation</span>
+											<span class="network-card__name">La Forge, Laure Letenneur Formation</span>
+											<span class="network-card__desc">Accompagnement en ingénierie pédagogique pour une formation destinée aux professionnels de l’accompagnement.</span>
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
 
-          <button class="testimonial-arrow networks__arrow networks__arrow--next" type="button" id="trustedNext" aria-label="Référence suivante" aria-controls="trustedTrack">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
+						<button class="testimonial-arrow networks__arrow networks__arrow--next" type="button" id="trustedNext" aria-label="Référence suivante" aria-controls="trustedTrack">
+							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+					</div>
 
-        <div class="testimonial-dots networks__dots" id="trustedDots" role="group" aria-label="Navigation des références">
-          <button class="dot active" type="button" data-index="0" aria-label="Afficher BUILDERS école d'ingénieurs" aria-pressed="true"></button>
-          <button class="dot" type="button" data-index="1" aria-label="Afficher E2C Normandie" aria-pressed="false"></button>
-          <button class="dot" type="button" data-index="2" aria-label="Afficher La Forge, Laure Letenneur Formation" aria-pressed="false"></button>
-        </div>
-        <button class="testimonial-toggle networks__toggle" id="trustedToggle" type="button" aria-pressed="false">
-          Lancer le défilement des références
-        </button>
-      </div>
-    </section>
+					<div class="testimonial-dots networks__dots" id="trustedDots" role="group" aria-label="Navigation des références">
+						<button class="dot active" type="button" data-index="0" aria-label="Afficher BUILDERS école d'ingénieurs" aria-pressed="true"></button>
+						<button class="dot" type="button" data-index="1" aria-label="Afficher E2C Normandie" aria-pressed="false"></button>
+						<button class="dot" type="button" data-index="2" aria-label="Afficher La Forge, Laure Letenneur Formation" aria-pressed="false"></button>
+					</div>
+					<button class="testimonial-toggle networks__toggle" id="trustedToggle" type="button" aria-pressed="false">
+						Lancer le défilement des références
+					</button>
+				</div>
+			</section>
 
-    <!-- ══════════════════════════════════════ 09 - FAQ ════════ -->
-    <section class="faq" id="faq" aria-labelledby="faq-title">
-      <div class="container faq__inner">
-        <p class="section-label">FAQ</p>
-        <h2 id="faq-title">Questions fréquentes</h2>
-        <div class="faq__list">
+			<!-- ══════════════════════════════════════ 09 - FAQ ════════ -->
+			<section class="faq" id="faq" aria-labelledby="faq-title">
+				<div class="container faq__inner">
+					<p class="section-label">FAQ</p>
+					<h2 id="faq-title">Questions fréquentes</h2>
+					<div class="faq__list">
 
-          <details class="faq__item">
-            <summary class="faq__question">
-              Notre zone d'intervention&nbsp;?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p><strong>En présentiel&nbsp;:</strong> région Normandie, avec une présence renforcée dans le Calvados, à Caen et son agglomération.</p>
-              <p><strong>À distance&nbsp;:</strong> accompagnement possible partout en France avec la même qualité de service.</p>
-            </div>
-          </details>
+						<details class="faq__item">
+							<summary class="faq__question">
+								Notre zone d'intervention&nbsp;?
+								<span class="faq__icon" aria-hidden="true"></span>
+							</summary>
+							<div class="faq__answer">
+								<p>
+									<strong>En présentiel&nbsp;:</strong>
+									région Normandie, avec une présence renforcée dans le Calvados, à Caen et son agglomération.</p>
+								<p>
+									<strong>À distance&nbsp;:</strong>
+									accompagnement possible partout en France avec la même qualité de service.</p>
+							</div>
+						</details>
 
-          <details class="faq__item">
-            <summary class="faq__question">
-              Nos horaires d'ouverture&nbsp;?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Du lundi au vendredi, de 9h à 18h.</p>
-            </div>
-          </details>
+						<details class="faq__item">
+							<summary class="faq__question">
+								Nos horaires d'ouverture&nbsp;?
+								<span class="faq__icon" aria-hidden="true"></span>
+							</summary>
+							<div class="faq__answer">
+								<p>Du lundi au vendredi, de 9h à 18h.</p>
+							</div>
+						</details>
 
-          <details class="faq__item">
-            <summary class="faq__question">
-              Pour qui sont nos services&nbsp;?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Nos services s'adressent aux <strong>organismes de formation</strong>, aux <strong>établissements d'enseignement supérieur</strong> et aux <strong>entreprises</strong> (PME) souhaitant améliorer ou créer leurs dispositifs de formation.</p>
-            </div>
-          </details>
+						<details class="faq__item">
+							<summary class="faq__question">
+								Pour qui sont nos services&nbsp;?
+								<span class="faq__icon" aria-hidden="true"></span>
+							</summary>
+							<div class="faq__answer">
+								<p>Nos services s'adressent aux
+									<strong>organismes de formation</strong>, aux
+									<strong>établissements d'enseignement supérieur</strong>
+									et aux
+									<strong>entreprises</strong>
+									(PME) souhaitant améliorer ou créer leurs dispositifs de formation.</p>
+							</div>
+						</details>
 
-          <details class="faq__item">
-            <summary class="faq__question">
-              Quels types de formations pouvez-vous concevoir&nbsp;?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Je travaille sur des formations présentiel, distanciel et hybride, incluant la scénarisation, le développement de modules e-learning, la rédaction de contenus avec des experts métiers, la diffusion sur LMS et l'évaluation.</p>
-            </div>
-          </details>
+						<details class="faq__item">
+							<summary class="faq__question">
+								Quels types de formations pouvez-vous concevoir&nbsp;?
+								<span class="faq__icon" aria-hidden="true"></span>
+							</summary>
+							<div class="faq__answer">
+								<p>Je travaille sur des formations présentiel, distanciel et hybride, incluant la scénarisation, le développement de modules e-learning, la rédaction de contenus avec des experts métiers, la diffusion sur LMS et l'évaluation.</p>
+							</div>
+						</details>
 
-          <details class="faq__item">
-            <summary class="faq__question">
-              Comment se déroule un accompagnement&nbsp;?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>En 5 étapes&nbsp;: nous nous rencontrons, j'analyse vos besoins, je vous soumets une proposition sur-mesure, nous lançons la collaboration, puis nous suivons la mise en œuvre et la qualité du dispositif.</p>
-            </div>
-          </details>
-          
-          <details class="faq__item">
-            <summary class="faq__question">
-              Qu'est-ce qu'un open badge&nbsp;?
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Un open badge est une certification numérique vérifiable qui reconnaît et valorise des compétences ou des acquis d'expérience. Je vous accompagne dans la mise en place de ces processus de reconnaissance.</p>
-            </div>
-          </details>
+						<details class="faq__item">
+							<summary class="faq__question">
+								Comment se déroule un accompagnement&nbsp;?
+								<span class="faq__icon" aria-hidden="true"></span>
+							</summary>
+							<div class="faq__answer">
+								<p>En 5 étapes&nbsp;: nous nous rencontrons, j'analyse vos besoins, je vous soumets une proposition sur-mesure, nous lançons la collaboration, puis nous suivons la mise en œuvre et la qualité du dispositif.</p>
+							</div>
+						</details>
 
-        </div>
-      </div>
-    </section>
+						<details class="faq__item">
+							<summary class="faq__question">
+								Qu'est-ce qu'un open badge&nbsp;?
+								<span class="faq__icon" aria-hidden="true"></span>
+							</summary>
+							<div class="faq__answer">
+								<p>Un open badge est une certification numérique vérifiable qui reconnaît et valorise des compétences ou des acquis d'expérience. Je vous accompagne dans la mise en place de ces processus de reconnaissance.</p>
+							</div>
+						</details>
 
-    <!-- ══════════════════════════════════════ 08 - CONTACT ════ -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact__inner">
-        <div class="contact__form-col">
-          <p class="section-label">Contact</p>
-          <h2 id="contact-title">Échangeons&nbsp;!</h2>
-          <p class="contact__sub">Décrivez-moi votre projet, je vous réponds sous 48&nbsp;h.</p>
-          <form class="form" action="mailto:carla.delepee@pedago-up.fr" method="post" enctype="text/plain" aria-label="Formulaire de contact">
-            <p class="form__required-note" id="form-required-note">Les champs marqués d'un astérisque sont obligatoires.</p>
-            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-            <div class="form__row">
-              <div class="form__field">
-                <label for="prenom">Prénom <span aria-hidden="true">*</span></label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name" required aria-describedby="form-required-note prenom-error">
-                <p class="form__error" id="prenom-error" aria-live="polite"></p>
-              </div>
-              <div class="form__field">
-                <label for="nom">Nom <span aria-hidden="true">*</span></label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name" required aria-describedby="form-required-note nom-error">
-                <p class="form__error" id="nom-error" aria-live="polite"></p>
-              </div>
-            </div>
-            <div class="form__field">
-              <label for="email">Adresse e-mail <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" placeholder="votre@email.fr" autocomplete="email" required aria-describedby="form-required-note email-error">
-              <p class="form__error" id="email-error" aria-live="polite"></p>
-            </div>
-            <div class="form__field">
-              <label for="organisation">Organisation</label>
-              <input type="text" id="organisation" name="organisation" placeholder="Votre organisme ou entreprise" autocomplete="organization">
-            </div>
-            <div class="form__field">
-              <label for="message">Message <span aria-hidden="true">*</span></label>
-              <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet pédagogique…" required aria-describedby="form-required-note message-error"></textarea>
-              <p class="form__error" id="message-error" aria-live="polite"></p>
-            </div>
-            <button type="submit" class="btn btn--primary">Envoyer la demande de contact</button>
-          </form>
-        </div>
-        <div class="contact__info-col">
-          <div class="contact__info-block">
-            <p class="contact__info-label">E-mail</p>
-            <a href="mailto:carla.delepee@pedago-up.fr">carla.delepee@pedago-up.fr</a>
-          </div>
-          <div class="contact__info-block">
-            <p class="contact__info-label">LinkedIn</p>
-            <a href="https://www.linkedin.com/in/carla-delépée-b7146a33/" target="_blank" rel="noopener noreferrer">
-              Profil LinkedIn - Carla Delépée
-              <span class="sr-only">(s'ouvre dans un nouvel onglet)</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+					</div>
+				</div>
+			</section>
 
-  </main><!-- /main -->
+			<!-- ══════════════════════════════════════ 08 - CONTACT ════ -->
+			<section class="contact" id="contact" aria-labelledby="contact-title">
+				<div class="container contact__inner">
+					<div class="contact__form-col">
+						<p class="section-label">Contact</p>
+						<h2 id="contact-title">Échangeons&nbsp;!</h2>
+						<p class="contact__sub">Décrivez-moi votre projet, je vous réponds sous 48&nbsp;h.</p>
+						<form class="form" action="mailto:carla.delepee@pedago-up.fr" method="post" enctype="text/plain" aria-label="Formulaire de contact">
+							<p class="form__required-note" id="form-required-note">Les champs marqués d'un astérisque sont obligatoires.</p>
+							<p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+							<div class="form__row">
+								<div class="form__field">
+									<label for="prenom">Prénom
+										<span aria-hidden="true">*</span>
+									</label>
+									<input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name" required aria-describedby="form-required-note prenom-error">
+									<p class="form__error" id="prenom-error" aria-live="polite"></p>
+								</div>
+								<div class="form__field">
+									<label for="nom">Nom
+										<span aria-hidden="true">*</span>
+									</label>
+									<input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name" required aria-describedby="form-required-note nom-error">
+									<p class="form__error" id="nom-error" aria-live="polite"></p>
+								</div>
+							</div>
+							<div class="form__field">
+								<label for="email">Adresse e-mail
+									<span aria-hidden="true">*</span>
+								</label>
+								<input type="email" id="email" name="email" placeholder="votre@email.fr" autocomplete="email" required aria-describedby="form-required-note email-error">
+								<p class="form__error" id="email-error" aria-live="polite"></p>
+							</div>
+							<div class="form__field">
+								<label for="organisation">Organisation</label>
+								<input type="text" id="organisation" name="organisation" placeholder="Votre organisme ou entreprise" autocomplete="organization">
+							</div>
+							<div class="form__field">
+								<label for="message">Message
+									<span aria-hidden="true">*</span>
+								</label>
+								<textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet pédagogique…" required aria-describedby="form-required-note message-error"></textarea>
+								<p class="form__error" id="message-error" aria-live="polite"></p>
+							</div>
+							<button type="submit" class="btn btn--primary">Envoyer la demande de contact</button>
+						</form>
+					</div>
+					<div class="contact__info-col">
+						<div class="contact__info-block">
+							<p class="contact__info-label">E-mail</p>
+							<a href="mailto:carla.delepee@pedago-up.fr">carla.delepee@pedago-up.fr</a>
+						</div>
+						<div class="contact__info-block">
+							<p class="contact__info-label">LinkedIn</p>
+							<a href="https://www.linkedin.com/in/carla-delépée-b7146a33/" target="_blank" rel="noopener noreferrer">
+								Profil LinkedIn - Carla Delépée
+								<span class="sr-only">(s'ouvre dans un nouvel onglet)</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 
-  <!-- ══════════════════════════════════════ 09 - FOOTER ═════ -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <img src="assets/logo_trim.avif" alt="Logo Pédago'Up" class="logo-img logo-img--footer" width="420" height="305">
-        <p>Conseil et expertise pédagogique pour organismes de formation et PME</p>
-      </div>
-      <nav class="footer__nav" aria-label="Navigation secondaire">
-        <p class="footer__nav-title">Navigation</p>
-        <ul>
-          <li><a href="#presentation">À propos</a></li>
-          <li><a href="#solutions">Nos services</a></li>
-          <li><a href="#testimonials">Témoignages</a></li>
-          <li><a href="#roadmap">Notre démarche</a></li>
-          <li><a href="#faq" aria-label="Foire au questions">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer__social">
-        <p class="footer__nav-title">Suivez-moi</p>
-        <a href="https://www.linkedin.com/in/carla-delépée-b7146a33/" target="_blank" rel="noopener noreferrer" class="social-link">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.22 0z"/></svg>
-          LinkedIn - Carla Delépée
-          <span class="sr-only">(s'ouvre dans un nouvel onglet)</span>
-        </a>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p>© 2026 Pédago'Up - Carla Delépée · Membre de <a href="https://creacoop14.fr" target="_blank" rel="noopener noreferrer">Créacoop&nbsp;14<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></a></p>
-    </div>
-  </footer>
+		</main>
+		<!-- /main -->
 
-  <script src="js/app.js"></script>
-</body>
+		<!-- ══════════════════════════════════════ 09 - FOOTER ═════ -->
+		<footer class="footer">
+			<div class="container footer__inner">
+				<div class="footer__brand">
+					<img src="assets/logo_trim.avif" alt="Logo Pédago'Up" class="logo-img logo-img--footer" width="420" height="305">
+					<p>Conseil et expertise pédagogique pour organismes de formation et PME</p>
+				</div>
+				<nav class="footer__nav" aria-label="Navigation secondaire">
+					<p class="footer__nav-title">Navigation</p>
+					<ul>
+						<li><a href="#presentation">À propos</a></li>
+						<li><a href="#solutions">Nos services</a></li>
+						<li><a href="#testimonials">Témoignages</a></li>
+						<li><a href="#roadmap">Notre démarche</a></li>
+						<li><a href="#faq" aria-label="Foire au questions">FAQ</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="footer__social">
+					<p class="footer__nav-title">Suivez-moi</p>
+					<a href="https://www.linkedin.com/in/carla-delépée-b7146a33/" target="_blank" rel="noopener noreferrer" class="social-link">
+						<svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.22 0z"/></svg>
+						LinkedIn - Carla Delépée
+						<span class="sr-only">(s'ouvre dans un nouvel onglet)</span>
+					</a>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<p>© 2026 Pédago'Up - Carla Delépée · Membre de
+					<a href="https://creacoop14.fr" target="_blank" rel="noopener noreferrer">Créacoop&nbsp;14<span class="sr-only">
+							(s'ouvre dans un nouvel onglet)</span>
+					</a>
+				</p>
+			</div>
+		</footer>
+
+		<script src="js/app.js"></script>
+	</body>
 </html>
